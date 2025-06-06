@@ -1,0 +1,445 @@
+section {
+    padding: 2rem 9%;
+}
+
+.btn {
+    border: 1px solid;
+    margin-top: 1rem;
+    display: inline-flex;
+    padding: 0.8rem 2rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-family: 'Fredoka', sans-serif;
+    font-style: normal;
+    box-shadow: 3px 7px #000;
+    background: #e7b9a9;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #6E093F;
+    animation: glow 3s ease-in-out infinite;
+    gap: 1rem;
+    align-items: center;
+}
+.btn:hover {
+    background: #F27957;
+    color: #000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    animation: glow-hover 3s ease-in-out infinite;
+}
+@keyframes glow-hover {
+  0%, 100% {
+    box-shadow: 0 0 5px 2px rgba(114, 9, 63, 0.7);
+  }
+  50% {
+     box-shadow: 0 0 15px 5px rgba(114, 9, 63, 1);
+  }
+}
+.inicio {
+    border: 0px solid;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    background: url(/assets/iconos/fondovideo.gif) no-repeat center center;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 17rem;
+    padding-bottom: 10rem;
+    position: relative;
+    z-index: 0;
+}
+.inicio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    pointer-events: none;
+}
+.inicio .iniciocontent {
+    text-align: center;
+    width: 60rem;
+}
+.inicio .iniciocontent h3{
+    color: #fefefe;
+    font-size: 3rem;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    
+}
+.inicio .iniciocontent span {
+    color: #EB9B2D;
+    font-family: 'Fredoka', sans-serif;
+    letter-spacing: 1rem;
+}
+.headerservicios {
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color: black;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 1000;
+    font-style: normal;
+}
+.headerservicios span{
+    background: green;
+    color: #fff;
+    display: inline-block;
+    padding: .5rem 3rem;
+     font-family: 'Fredoka', sans-serif;
+    font-weight: 1000;
+    font-style: normal;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+.servicios .box-container {
+    border: 0px solid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    
+}
+
+.servicios .box-container .box {
+    border: 3px solid #000;
+    padding: 3rem 2rem;
+    background: #f64f59;
+    box-shadow: 5px 10px;
+    outline: yellow;
+    text-align: center;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: box-shadow 0.6s ease, transform 0.3s ease;
+    will-change: box-shadow;
+}
+.servicios .box-container .box:hover {
+    box-shadow: 2px 2px 20px 3px yellow;
+    transform: scale(1.05);
+}
+.servicios .box-container .box h3{
+     font-size: 2rem;
+    line-height: 1;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: #142222;
+}
+.servicios .box-container .box h3 span {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: #3A0553;
+}
+.servicios .box-container .box p{
+     font-family: 'Fredoka', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: #3A0553;
+    padding-bottom: 1rem;
+    font-size: 1.5rem; 
+}
+
+.presentaciones-slider .wrapper .box .price {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.presentaciones .presentaciones-slider:first-child{
+    margin-bottom: 2rem;
+}
+.presentaciones .presentaciones-slider {
+    border: 0px solid;
+    border-left: 1.5px solid;
+    border-right: 1.5px solid;
+    padding: 1rem;
+}
+
+.presentaciones .presentaciones-slider .box {
+    border: 3px solid #000;
+    background: #f0f0f0;
+    border-radius: .5rem;
+    text-align: center;
+    padding: 1.5rem;
+    outline-offset: -1rem;
+    box-shadow: 5px 10px;
+    transform: .2s linear;
+    transition: all 0.2s linear;
+    width: 18rem;
+    height: auto;
+    
+}
+
+
+.presentaciones .presentaciones-slider .box:hover{
+    transition: all 0.2 linear;
+    box-shadow: 2px 2px 20px 3px #d97ead;
+    transform: scale(1.03);
+}
+.presentaciones .presentaciones-slider .box:hover img{
+    transform: scale(1.3);
+}
+
+.presentaciones .presentaciones-slider .box img{
+    height: 10rem;
+    transition: all 0.3s ease;
+}
+.presentaciones .presentaciones-slider .box img:hover {
+    transition: all 0.3s ease;
+    transform: scale(1.30);
+}
+
+.presentaciones .presentaciones-slider .box h1{
+    font-size: 2rem;
+    color: #d94c8a;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    background: linear-gradient(to right, #ffcde2, #f7a5d1); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 1rem 0 0.5rem;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.05); 
+}
+
+.presentaciones .presentaciones-slider .box h2{
+    font-size: 1.6rem;
+    color: #333;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 400;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    background-color: #f3e5f5; 
+    border-radius: 1rem;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    margin: 0.5rem auto;
+}
+.unidadespresentacion {
+    font-size: 1.8rem;
+    color: #6E093F;
+}
+
+.presentaciones .presentaciones-slider .box .price{
+    font-size: 1.9rem;
+    color: #2E7D32; 
+    padding: 0.8rem 1.2;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 500; 
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 0.3rem; 
+    background-color: #f1f8e9; 
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    margin: 0.5rem auto;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.presentaciones .presentaciones-slider .box .price:hover{
+    background-color: #dcedc8;
+    transform: scale(1.05);
+}
+
+.presentaciones-slider .wrapper
+ {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 1rem 0;
+}
+.presentaciones-slider {
+    margin-bottom: 2rem;
+}
+.contenedor-boton-carrito{
+    position: relative;
+    display: inline-block;
+}
+.carrito-desplegable {
+    position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(10px, -50%);
+  background: white;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  color: #333;
+  min-width: 150px;
+  display: none; /* oculto */
+  z-index: 1000;
+}
+.contenedor-boton-carrito.activo .carrito-desplegable {
+    display: block;
+}
+
+.presentaciones-slider .carpresentacion {
+    
+    background: white;
+    color: #ff4081;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+    flex-shrink: 0;
+    
+}
+.btn:hover .carpresentacion,
+.presentaciones-slider .carpresentacion:hover {
+    background: #ffe0ec;
+    color: #d5006a;
+    border-radius: 1rem;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+.presentaciones-slider .carpresentacion mat-icon {
+    font-size: 2rem;
+}
+.dineropresentacion {
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 0.4rem;
+    font-size: 1.5rem;
+    color: #4CAF50; 
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.price:hover .dineropresentacion {
+    transform: scale(1.2);
+    background-color: #e8f5e9;
+}
+
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px 2px rgba(235, 155, 45, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 15px 5px rgba(235, 155, 45, 1);
+  }
+}
+@media (max-width: 768px) {
+  section {
+    padding: 1.5rem 5%;
+  }
+
+  .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 1.3rem;
+    gap: 0.5rem;
+  }
+
+  .inicio {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    background-attachment: scroll;
+  }
+
+  .inicio .iniciocontent {
+    width: 90%;
+  }
+
+  .inicio .iniciocontent h3 {
+    font-size: 2rem;
+  }
+
+  .inicio .iniciocontent span {
+    letter-spacing: 0.3rem;
+    font-size: 2.2rem;
+  }
+
+  .headerservicios {
+    font-size: 2.2rem;
+  }
+
+  .headerservicios span {
+    padding: .3rem 1.5rem;
+    font-size: 2rem;
+  }
+
+  .servicios .box-container {
+    grid-template-columns: 1fr;
+  }
+
+  .servicios .box-container .box {
+    padding: 2rem 1rem;
+  }
+
+  .servicios .box-container .box h3 {
+    font-size: 1.6rem;
+  }
+
+  .servicios .box-container .box p {
+    font-size: 1.6rem;
+  }
+
+  .presentaciones .presentaciones-slider {
+    padding: 0.5rem;
+  }
+
+  .presentaciones .presentaciones-slider .box {
+    width: 15rem;
+    padding: 1rem;
+  }
+
+  .presentaciones .presentaciones-slider .box img {
+    height: 8rem;
+  }
+
+  .presentaciones .presentaciones-slider .box h1 {
+    font-size: 1.6rem;
+  }
+
+  .presentaciones .presentaciones-slider .box h2 {
+    font-size: 1.3rem;
+    gap: 0.3rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .unidadespresentacion {
+    font-size: 1.5rem;
+  }
+
+  .presentaciones .presentaciones-slider .box .price {
+    font-size: 1.5rem;
+    padding: 0.6rem 1rem;
+    gap: 0.2rem;
+  }
+
+  .presentaciones-slider .wrapper {
+    gap: 1rem;
+  }
+
+  .presentaciones-slider .carpresentacion {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .presentaciones-slider .carpresentacion mat-icon {
+    font-size: 1.6rem;
+  }
+
+  .dineropresentacion {
+    font-size: 1.2rem;
+  }
+
+  .carrito-desplegable {
+    min-width: 120px;
+    font-size: 0.9rem;
+  }
+}

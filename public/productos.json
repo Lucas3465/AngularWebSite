@@ -1,0 +1,12 @@
+[
+  { "id": 1, "nombre": "Alfajor", "precio": 360, "imagen": "Alfajor.png" },
+  { "id": 2, "nombre": "Gomitas", "precio": 360, "imagen": "Alfajor.png" },
+  { "id": 3, "nombre": "Caramelos", "precio": 360, "imagen": "Alfajor.png" },
+  { "id": 4, "nombre": "Paletas", "precio": 360, "imagen": "Alfajor.png" },
+  { "id": 5, "nombre": "Bombones", "precio": 360, "imagen": "Alfajor.png" },
+  { "id": 6, "nombre": "Saladitos", "precio": 360, "imagen": "Alfajor.png" },
+  { "id": 7, "nombre": "Pulseras", "precio": 360, "imagen": "Alfajor.png" },
+  { "id": 8, "nombre": "Rosquitas", "precio": 360, "imagen": "Alfajor.png" },
+  { "id": 9, "nombre": "Barras", "precio": 360, "imagen": "Alfajor.png" },
+  { "id": 10, "nombre": "Cobertura", "precio": 360, "imagen": "Alfajor.png" }
+]

@@ -1,3 +1,10 @@
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { Catalogo } from './catalogo/catalogo';
+import { Inicio } from './inicio/inicio';
+import { NgModule } from '@angular/core';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+    { path: "", component: Inicio},
+    { path: "catalogo", component: Catalogo},
+    { path: "**" , pathMatch: "full" , redirectTo: "#"}
+];
