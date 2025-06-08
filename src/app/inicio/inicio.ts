@@ -6,14 +6,14 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
-
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 // import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 @Component({
   selector: 'app-inicio',
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, MatIconModule, RouterOutlet, RouterLink],
   templateUrl: './inicio.html',
-  styleUrl: './inicio.css'
+  styleUrl: './inicio.css',
   
 })
 export class Inicio implements AfterViewInit {

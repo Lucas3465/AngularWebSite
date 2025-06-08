@@ -1,0 +1,26 @@
+<div class="carrito-panel" [class.abierto]="mostrar">
+  <div class="carrito-header">
+    <h2>Tu Carrito</h2>
+    <button class="cerrar" (click)="cerrarCarrito()">×</button>
+  </div>
+
+  <div class="carrito-contenido" *ngIf="carrito.length > 0; else vacio">
+    <div class="item-carrito" *ngFor="let producto of carrito">
+      <img [src]="producto.imagen" alt="{{ producto.nombre }}">
+      <div class="detalle">
+        <h4>{{ producto.nombre }}</h4>
+        <p class="precio">${{ producto.precio }}</p>
+        <button (click)="eliminarDelCarrito(producto)">Quitar</button>
+      </div>
+    </div>
+
+    <div class="carrito-total">
+      <p>Total: ${{ obtenerTotal() }}</p>
+      <button class="btn-comprar" (click)="irACheckout()">Finalizar Compra</button>
+    </div>
+  </div>
+
+  <ng-template #vacio>
+    <p class="carrito-vacio">Tu carrito está vacío 🍬</p>
+  </ng-template>
+</div>

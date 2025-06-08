@@ -1,5 +1,6 @@
 section {
     padding: 2rem 9%;
+    
 }
 
 .btn {
@@ -19,6 +20,7 @@ section {
     animation: glow 3s ease-in-out infinite;
     gap: 1rem;
     align-items: center;
+    text-decoration: none;
 }
 .btn:hover {
     background: #F27957;
@@ -47,6 +49,7 @@ section {
     padding-bottom: 10rem;
     position: relative;
     z-index: 0;
+    border-bottom: 4px solid #ff6b81;
 }
 .inicio::before {
     content: "";

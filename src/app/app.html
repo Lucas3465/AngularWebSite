@@ -2,19 +2,27 @@
 
 
 <div class="nav" [class.active]="menuOpen">
-    <div class="logo">
+  <div class="logo">
     <img routerLink="/inicio" routerLinkActive="router-link-active" src="assets/iconos/logohd.png" alt="">
-</div>
-<div class="hamburger" (click)="menuOpen = !menuOpen">
+  </div>
+  <div class="hamburger" (click)="menuOpen = !menuOpen">
     <mat-icon>menu</mat-icon>
-</div>
-<div class="nav-links">
-<a routerLink="/inicio" routerLinkActive="router-link-active"> <mat-icon class="navicon">home</mat-icon>Inicio </a>
-<a routerLink="/catalogo" routerLinkActive="router-link-active" > <mat-icon class="navicon">shop</mat-icon>Tienda </a>
-<a routerLink="/catalogo" routerLinkActive="router-link-active" > <mat-icon class="navicon">location_city</mat-icon>Locales </a>
-
-</div>
-<a class="car"><mat-icon class="navicon">shopping_cart</mat-icon></a>
+  </div>
+  <div class="nav-links">
+    <a routerLink="/inicio" routerLinkActive="router-link-active"> 
+      <mat-icon class="navicon">home</mat-icon>Inicio 
+    </a>
+    <a routerLink="/catalogo" routerLinkActive="router-link-active"> 
+      <mat-icon class="navicon">shop</mat-icon>Tienda 
+    </a>
+    <a routerLink="/catalogo" routerLinkActive="router-link-active"> 
+      <mat-icon class="navicon">location_city</mat-icon>Locales 
+    </a>
+    <div class="car" (click)="toggleCarrito()">
+      <mat-icon class="navicon">
+        {{ mostrarCarrito ? "close" : "shopping_bag"}}</mat-icon>
+    </div>
+  </div>
 </div>
 
 
@@ -22,6 +30,12 @@
 
 <router-outlet></router-outlet>
 
+
+
+<carrito 
+  [mostrar]="mostrarCarrito" 
+  (cerrar)="cerrarCarrito()">
+</carrito>
 
 <footer class="pie">
 <div class="grupo1">
