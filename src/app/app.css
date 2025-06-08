@@ -172,8 +172,14 @@
     position: relative;
     margin: 0;
     object-fit: contain;
+    transition: all 0.3s ease;
 
 }
+.nav .logo img:hover {
+    transition: all 0.3s ease;
+    transform: scale(1.10);
+}
+
 .hamburger {
     display: none;
     cursor: pointer;
@@ -205,6 +211,126 @@
     align-self: center;
 }
 */
+
+footer.pie {
+  background-color: #f8f1f1;
+  color: #333;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+  margin-top: 60px;
+  border-top: 4px solid #ff6b81;
+}
+footer .grupo1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+footer .boxpie{
+  flex: 1 1 250px;
+  min-width: 250px;
+}
+footer .boxpie h2{
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ff6b81;
+}
+footer .boxpie p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+}
+
+footer .boxpie img {
+  width: 200px;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+footer .boxpie img:hover {
+  transform: scale(1.05);
+}
+
+footer .red-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+footer .red-social a {
+  font-size: 20px;
+  color: #ff6b81;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer .red-social a:hover {
+  color: #333;
+}
+
+footer .grupo2 {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #999;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+footer .grupo2 b {
+  color: #ff6b81;
+}
+footer .red-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+footer .red-social a{
+    font-size: 25px;
+    color: #ff6b81;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .red-social a:hover {
+    color: #333;
+    transition: all 0.3s ease;
+    transform: scale(1.10);
+}
+footer .boxpie h1,
+footer .boxpie h2 {
+  display: flex;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+footer .boxpie h1 mat-icon,
+footer .boxpie h2 mat-icon {
+  margin-right: 8px;
+  color: #ff6b81;
+  font-size: 24px;
+  transition: all 0.3s ease;
+
+}
+
+footer .boxpie h1 {
+  font-size: 1.5rem;
+  margin: 12px 0 6px;
+  font-weight: 600;
+}
+
+footer .boxpie h2 {
+  font-size: 1.2rem;
+  margin: 0 0 12px;
+  color: #555;
+  font-weight: 500;
+}
+footer .boxpie h1:hover mat-icon,
+footer .boxpie h2:hover mat-icon{
+    transition: all  0.3s ease;
+    transform: scale(1.20);
+}
+
 @media (max-width: 1024px) {
   .nav {
     flex-direction: column;

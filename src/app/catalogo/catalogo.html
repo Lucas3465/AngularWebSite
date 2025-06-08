@@ -1,1 +1,76 @@
-<p>catalogo works!</p>
+<div class="catalogo">
+  <div class="filtros">
+    <div class="filtro-item">
+      <span class="iconify icono" data-icon="mdi:magnify" title="Buscar" aria-hidden="true"></span>
+      <input
+        type="text"
+        [(ngModel)]="filtroNombre"
+        placeholder="Buscar por nombre"
+        aria-label="Buscar por nombre"
+      />
+        
+
+    </div>
+
+    <div class="filtro-item">
+      <span class="iconify icono" data-icon="mdi:shape-outline" title="Categoría" aria-hidden="true"></span>
+      <select [(ngModel)]="filtroCategoria" aria-label="Filtrar por categoría">
+        <option value="">Todas las categorías</option>
+        <option *ngFor="let categoria of obtenerCategorias()" [value]="categoria">
+          {{ categoria }}
+        </option>
+      </select>
+    </div>
+
+    <div class="filtro-item">
+      <span class="iconify icono" data-icon="mdi:cash-minus" title="Precio mínimo" aria-hidden="true"></span>
+      <input
+        type="number"
+        [(ngModel)]="precioMin"
+        placeholder="Precio mínimo"
+        aria-label="Precio mínimo"
+        min="0"
+      />
+    </div>
+
+    <div class="filtro-item">
+      <span class="iconify icono" data-icon="mdi:cash-plus" title="Precio máximo" aria-hidden="true"></span>
+      <input
+        type="number"
+        [(ngModel)]="precioMax"
+        placeholder="Precio máximo"
+        aria-label="Precio máximo"
+        min="0"
+      />
+    </div>
+
+
+    <label for="filtroPrecio" class="sr-only">Filtrar por precio</label>
+        <input
+        type="range"
+        id="filtroPrecio"
+        min="0"
+        [max]="precioMaximo"
+        [(ngModel)]="precioFiltro"
+        (input)="filtrarPorPrecio()"
+        />
+        <span class="precio-actual">${{ precioFiltro }}</span>
+
+    <button class="btn-aplicar" (click)="aplicarFiltros()">Aplicar filtros</button>
+
+  </div>
+
+  <div class="productos-grid">
+
+    <div *ngFor="let producto of productosFiltrados" class="producto-card-wrapper">
+        <div class="producto-card" [@fadeInOut]>
+        <img [src]="producto.imagen" alt="{{producto.nombre}}" *ngIf="producto.imagen" loading="lazy" />
+        <h3>{{producto.nombre}}</h3>
+        <p class="precio">${{producto.precio}}</p>
+        <button (click)="agregarAlCarrito(producto)">Agregar al carrito</button>
+    </div>
+
+    </div>
+    
+  </div>
+</div>

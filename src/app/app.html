@@ -3,7 +3,7 @@
 
 <div class="nav" [class.active]="menuOpen">
     <div class="logo">
-    <img src="assets/iconos/logohd.png" alt="">
+    <img routerLink="/inicio" routerLinkActive="router-link-active" src="assets/iconos/logohd.png" alt="">
 </div>
 <div class="hamburger" (click)="menuOpen = !menuOpen">
     <mat-icon>menu</mat-icon>
@@ -15,11 +15,46 @@
 
 </div>
 <a class="car"><mat-icon class="navicon">shopping_cart</mat-icon></a>
-
-
-
 </div>
+
+
 
 
 <router-outlet></router-outlet>
 
+
+<footer class="pie">
+<div class="grupo1">
+            <div class="boxpie">
+                <figure>
+                    <a href="#">
+                        <img src="assets/iconos/logohd.png" alt="pielogo">
+                    </a>
+                </figure>
+            </div>
+            <div class="boxpie">
+                <h2>Desarrollador web</h2>
+                <p>Lucas Bonilla</p>
+                <p>Telefono: +598 96 302 355</p>
+                <p>Correo Electronico: splasbonilla&#64;gmail.com</p>
+                
+            </div>
+
+            <div class="boxpie">
+                <h2>Contacto</h2>
+                <div class="red-social">
+                        <a href="#" class="fab fa-whatsapp" target="_blank"></a>
+                        <a href="#" class="fab fa-facebook" target="_blank"></a>
+                        <a href="#" class="fab fa-instagram" target="_blank"></a>
+                </div>
+
+                <h1><mat-icon>phone</mat-icon>096499822</h1>
+                <h2><mat-icon>local_shipping</mat-icon>099841160</h2>   
+
+            </div>
+        </div>
+        <div class="grupo2">
+            <small>&copy; 2025 <b>Dulcemania</b> - Todos los Derechos Reservados</small>
+        </div>
+
+</footer>
