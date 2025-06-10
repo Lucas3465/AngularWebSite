@@ -18,9 +18,13 @@
     <a routerLink="/catalogo" routerLinkActive="router-link-active"> 
       <mat-icon class="navicon">location_city</mat-icon>Locales 
     </a>
-    <div class="car" (click)="toggleCarrito()">
+    <div class="car" (click)="toggleCarrito()" style="position: relative;">
       <mat-icon class="navicon">
         {{ mostrarCarrito ? "close" : "shopping_bag"}}</mat-icon>
+        <span
+        *ngIf="cantidadTotal > 0"
+        class="badge"
+        >{{ cantidadTotal > 99 ? '+99' : cantidadTotal }}</span>
     </div>
   </div>
 </div>
@@ -51,11 +55,11 @@
                 <p>Lucas Bonilla</p>
                 <p>Telefono: +598 96 302 355</p>
                 <p>Correo Electronico: splasbonilla&#64;gmail.com</p>
-                
+                <img class="bandera" src="assets/iconos/bandera.png" alt="">
             </div>
 
             <div class="boxpie">
-                <h2>Contacto</h2>
+                <h2>Redes Sociales</h2>
                 <div class="red-social">
                         <a href="#" class="fab fa-whatsapp" target="_blank"></a>
                         <a href="#" class="fab fa-facebook" target="_blank"></a>
@@ -64,7 +68,7 @@
 
                 <h1><mat-icon>phone</mat-icon>096499822</h1>
                 <h2><mat-icon>local_shipping</mat-icon>099841160</h2>   
-
+                <img class="Tarjetas" src="assets/iconos/Metodos_Tarjetas.png" alt="">
             </div>
         </div>
         <div class="grupo2">

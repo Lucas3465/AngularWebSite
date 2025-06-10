@@ -1,0 +1,91 @@
+.notificacion {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #fff0f5; 
+  border-left: 6px solid #f06292; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 300px;
+  max-width: 380px;
+  z-index: 9999;
+  animation: fadeInOut 3s ease-in-out;
+  font-family: 'Segoe UI', sans-serif;
+  animation: popInOut 3s ease-in-out;
+}
+
+.notificacion img {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  object-fit: contain;
+  border: 2px solid #f8bbd0; 
+  object-position: center top;
+
+}
+
+.notificacion .texto {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.notificacion .texto .nombre {
+  margin: 0;
+  font-size: 17px;
+  color: #444;
+}
+
+.notificacion .texto .precio {
+    margin: 0;
+    font-size: 20px;
+    color: #e91e63;
+}
+.notificacion .texto p strong {
+  color: #e91e63;
+  font-size: 15px;
+}
+
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+@keyframes popInOut {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+}
+
+

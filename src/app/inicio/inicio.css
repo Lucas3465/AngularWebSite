@@ -15,7 +15,7 @@ section {
     font-style: normal;
     box-shadow: 3px 7px #000;
     background: #e7b9a9;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.3s ease, color 0.3s ease;
     color: #6E093F;
     animation: glow 3s ease-in-out infinite;
     gap: 1rem;
@@ -28,6 +28,18 @@ section {
     transition: background-color 0.3s ease, color 0.3s ease;
     animation: glow-hover 3s ease-in-out infinite;
 }
+.btn:active {
+    transform: scale(0.96);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+    0% {  transform: scale(1);  }
+    50%{  transform: scale(0.96);  }
+    100% { transform: scale(1); }
+}
+
 @keyframes glow-hover {
   0%, 100% {
     box-shadow: 0 0 5px 2px rgba(114, 9, 63, 0.7);
@@ -104,14 +116,22 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 2rem;
-    
+    padding: 0 32px;
+    flex-wrap: wrap;
+}
+.servicios .box-container img {
+    height: 20rem;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
 }
 
 .servicios .box-container .box {
     border: 3px solid #000;
-    padding: 3rem 2rem;
-    background: #f64f59;
-    box-shadow: 5px 10px;
+    padding: 1rem 2rem 0.5rem;
+    background: #ffe4ec;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     outline: yellow;
     text-align: center;
     font-family: 'Fredoka', sans-serif;
@@ -119,6 +139,7 @@ section {
     font-style: normal;
     transition: box-shadow 0.6s ease, transform 0.3s ease;
     will-change: box-shadow;
+    border-radius: 20px;
 }
 .servicios .box-container .box:hover {
     box-shadow: 2px 2px 20px 3px yellow;
@@ -175,6 +196,7 @@ section {
     transition: all 0.2s linear;
     width: 18rem;
     height: auto;
+
     
 }
 
@@ -229,7 +251,7 @@ section {
 }
 
 .presentaciones .presentaciones-slider .box .price{
-    font-size: 1.9rem;
+    font-size: 1.6rem;
     color: #2E7D32; 
     padding: 0.8rem 1.2;
     font-family: 'Fredoka', sans-serif;

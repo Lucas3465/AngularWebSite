@@ -5,8 +5,10 @@
       <input
         type="text"
         [(ngModel)]="filtroNombre"
+        (ngModelChange)="aplicarFiltros()"
         placeholder="Buscar por nombre"
         aria-label="Buscar por nombre"
+
       />
         
 
@@ -14,7 +16,7 @@
 
     <div class="filtro-item">
       <span class="iconify icono" data-icon="mdi:shape-outline" title="Categoría" aria-hidden="true"></span>
-      <select [(ngModel)]="filtroCategoria" aria-label="Filtrar por categoría">
+      <select [(ngModel)]="filtroCategoria" aria-label="Filtrar por categoría" (ngModelChange)="aplicarFiltros()">
         <option value="">Todas las categorías</option>
         <option *ngFor="let categoria of obtenerCategorias()" [value]="categoria">
           {{ categoria }}
@@ -27,6 +29,7 @@
       <input
         type="number"
         [(ngModel)]="precioMin"
+        (ngModelChange)="aplicarFiltros()"
         placeholder="Precio mínimo"
         aria-label="Precio mínimo"
         min="0"
@@ -38,6 +41,7 @@
       <input
         type="number"
         [(ngModel)]="precioMax"
+        (ngModelChange)="aplicarFiltros()"
         placeholder="Precio máximo"
         aria-label="Precio máximo"
         min="0"
@@ -56,7 +60,7 @@
         />
         <span class="precio-actual">${{ precioFiltro }}</span>
 
-    <button class="btn-aplicar" (click)="aplicarFiltros()">Aplicar filtros</button>
+    <!-- <button class="btn-aplicar" (click)="aplicarFiltros()">Aplicar filtros</button> -->
 
   </div>
 
@@ -74,3 +78,5 @@
     
   </div>
 </div>
+
+<app-notificacion></app-notificacion>

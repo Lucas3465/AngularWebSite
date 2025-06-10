@@ -108,7 +108,8 @@
   justify-content: space-between;
 }
 .filtros > :not(:last-child) {
-  flex-grow: 1;
+  flex: 1 1 auto;
+  max-width: 250px;
 }
 .filtros > :last-child {
   flex-grow: 0;
@@ -208,11 +209,15 @@ input[type="range"]::-moz-range-thumb {
   transition: background-color 0.3s ease;
 }
 .precio-actual {
-  margin-left: 10px;
+  margin-left: -10px;
   font-weight: 700;
   color: #ff6b81;
   font-size: 1.1rem;
   user-select: none;
   -webkit-user-select: none;
   white-space: nowrap;
+  border-radius: 30px;
+  border-color: #ff6b81;
+  border: 2px solid #ffc0cb;
+  text-align: center;
 }

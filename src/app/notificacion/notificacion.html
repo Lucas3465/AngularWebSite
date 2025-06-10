@@ -1,0 +1,8 @@
+<div class="notificacion" *ngIf="visible">
+  <img [src]="producto.imagen" alt="Imagen del producto" />
+  <div class="texto">
+    <p class="nombre"><strong>{{ producto.nombre }}</strong> agregado al carrito</p>
+    <p class="precio"> ${{ producto.precio }}</p>
+  </div>
+</div>
+
