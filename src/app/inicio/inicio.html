@@ -33,19 +33,41 @@
 </div>
 <section class="presentaciones" id="presentaciones">
     
+    <h1 class="headerservicios">Descubrí los sabores que<span class="corazon">enamoran</span>en cada categoría</h1>
+
+    <div class="catcontainer">
+        <div  class="catcard"
+                #catcard
+                *ngFor="let categoria of categorias; let i = index"
+                (mouseenter)="onCardHover(i, true)"
+                (mouseleave)="onCardHover(i, false)"
+        >
+            <div class="cattext">{{ categoria.nombre }}</div>
+            <div class="catimg"><img class="catimgproduct" src="{{ categoria.img }}" alt=""></div>
+        </div>
+        
+    </div>
+    
+
+
     <h1 class="headerservicios">Date el <span>GUSTO</span> con nuestros <span>MEJORES</span> productos</h1>
     
     <div class="swiper presentaciones-slider">
         <div class="swiper-wrapper">
-            <div class="swiper-slide box" *ngFor="let producto of productos.slice(0, 8)">
+            <div class="swiper-slide box" *ngFor="let producto of productos.slice(0, 16)">
+                <div class="badge-container"
+                    >
+                            <div class="badge nuevo" *ngIf="producto.nuevo"><mat-icon class="badge-icon">star</mat-icon>NUEVO</div>
+                            <div class="badge descuento" *ngIf="producto.descuento"><mat-icon class="badge-icon">local_offer</mat-icon>-{{producto.descuento}}</div>
+                </div>
                 
-                <img [src]="producto.imagen" alt="">
+                <img class="productoimg" [src]="producto.imagen" alt="">
                 <h1>{{ producto.nombre }}</h1>
                 <h2><mat-icon class="unidadespresentacion">widgets</mat-icon>Unidades: {{ producto.unidades }}</h2>
                 <div class="price"><mat-icon class="dineropresentacion">attach_money</mat-icon>{{ producto.precio }}</div>
                 <div class="contenedor-boton-carrito">
-                    <a (click)="agregarAlCarrito(producto)" class="btn"><mat-icon class="carpresentacion">shopping_cart</mat-icon>
-                    Agregar al carrito
+                    <a (click)="agregarAlCarrito(producto)" class="btnpresentacion"><mat-icon class="carpresentacion">shopping_cart</mat-icon>
+        
                     </a>
                 </div>
                 <div class="carrito-desplegable">
@@ -57,10 +79,14 @@
         </div>
     </div>
     
-        <div class="swiper presentaciones-slider">
+        <!-- <div class="swiper presentaciones-slider">
             <div class="swiper-wrapper">
              <div class="swiper-slide box" *ngFor="let producto of productos.slice(8, 16)">
-                
+                <div class="badge-container"
+                    >
+                            <div class="badge nuevo" *ngIf="producto.nuevo"><mat-icon class="badge-icon">star</mat-icon>NUEVO</div>
+                            <div class="badge descuento" *ngIf="producto.descuento"><mat-icon class="badge-icon">local_offer</mat-icon>-{{producto.descuento}}</div>
+                </div>
                 <img [src]="producto.imagen" alt="">
                 <h1>{{ producto.nombre }}</h1>
                 <h2><mat-icon class="unidadespresentacion">widgets</mat-icon>Unidades: {{ producto.unidades }}</h2>
@@ -75,9 +101,15 @@
                 </div>    
             </div>
             </div>
-        </div>
+        </div> -->
 
             <h1 class="headerservicios">Ahorra con las <span>mejores</span> ofertas</h1>
+        <div >
+
+
+        </div>
+
+
 
         
    <router-outlet></router-outlet>

@@ -5,7 +5,10 @@
     "nombre": "Gomita fini gusano",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "gomitas"
+    "categoria": "gomitas",
+    "unidades": "500GR",
+    "nuevo": true,
+    "descuento": 10
   },
   {
     "id": "Docile-Gusano",
@@ -13,7 +16,10 @@
     "nombre": "Gomita Docile gusano",
     "precio": 165,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "gomitas"
+    "categoria": "gomitas",
+    "unidades": "500GR",
+    "nuevo": true,
+    "descuento": 10
   },
   {
     "id": "Docile-Diente",
@@ -21,7 +27,10 @@
     "nombre": "Gomitas Docile diente",
     "precio": 165,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "gomitas"
+    "categoria": "gomitas",
+    "unidades": "500GR",
+    "nuevo": true,
+    "descuento": 10
   },
   {
     "id": "Docile-Mora",
@@ -29,7 +38,10 @@
     "nombre": "Gomitas Docile Mora",
     "precio": 165,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "gomitas"
+    "categoria": "gomitas",
+    "unidades": "500GR",
+    "nuevo": true,
+    "descuento": 10
   },
   {
     "id": "Docile-Fiesta",
@@ -37,7 +49,10 @@
     "nombre": "Gomitas Docile Fiesta",
     "precio": 165,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "gomitas"
+    "categoria": "gomitas",
+    "unidades": "500GR",
+    "nuevo": true,
+    "descuento": 10
   },
   {
     "id": "Docile-Beso",
@@ -45,7 +60,10 @@
     "nombre": "Gomitas Docile Beso",
     "precio": 165,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "gomitas"
+    "categoria": "gomitas",
+    "unidades": "500GR",
+    "nuevo": true,
+    "descuento": 10
   },
   {
     "id": "Fini-malvavisco-torneado-Azul",
@@ -53,7 +71,10 @@
     "nombre": "Fini Malvavisco Torneado",
     "precio": 145,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "malvavisco"
+    "categoria": "malvavisco",
+    "unidades": "250GR",
+    "nuevo": true,
+    "descuento": 10
   },
   {
     "id": "Fini-malvavisco-torneado-Rosa",
@@ -61,7 +82,10 @@
     "nombre": "Fini Malvavisco Torneado",
     "precio": 145,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "malvavisco"
+    "categoria": "malvavisco",
+    "unidades": "250GR",
+    "nuevo": true,
+    "descuento": 10
   },
   {
     "id": "Fini-malvavisco-volcan-Rosa",
@@ -69,7 +93,10 @@
     "nombre": "Fini Malvavisco Volcan",
     "precio": 145,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "malvavisco"
+    "categoria": "malvavisco",
+    "unidades": "250GR",
+    "nuevo": true,
+    "descuento": 10
   },
   {
     "id": "Fini-malvavisco-volcan-Azul",
@@ -77,7 +104,10 @@
     "nombre": "Fini Malvavisco volcan",
     "precio": 145,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "malvavisco"
+    "categoria": "malvavisco",
+    "unidades": "250GR",
+    "nuevo": true,
+    "descuento": 10
   },
   {
     "id": "Portezuelo-Chocolate-comun",
@@ -85,7 +115,10 @@
     "nombre": "Portezuelo Alfajor Chocolate",
     "precio": 360,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Alfajores"
+    "categoria": "Alfajores",
+    "unidades": "18",
+    "nuevo": true,
+    "descuento": 10
   },
   {
     "id": "Portezuelo-ChocolateBlanco-comun",
@@ -93,7 +126,10 @@
     "nombre": "Portezuelo Alfajor Blanco",
     "precio": 360,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Alfajores"
+    "categoria": "Alfajores",
+    "unidades": "18",
+    "nuevo": true,
+    "descuento": 10
   },
   {
     "id": "Portezuelo-Nieve-comun",
@@ -101,7 +137,10 @@
     "nombre": "Portezuelo Alfajor Nieve",
     "precio": 360,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Alfajores"
+    "categoria": "Alfajores",
+    "unidades": "18",
+    "nuevo": true,
+    "descuento": 10
   },
   {
     "id": "Portezuelo-ChocolateOro-comun",
@@ -109,7 +148,10 @@
     "nombre": "Portezuelo Alfajor Oro",
     "precio": 360,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Alfajores"
+    "categoria": "Alfajores",
+    "unidades": "18",
+    "nuevo": true,
+    "descuento": 10
   },
   {
     "id": "Caramelo-Duro-Frutal",
@@ -117,7 +159,8 @@
     "nombre": "Caramelo Duro Frutal",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Caramelos"
+    "categoria": "Caramelos",
+    "unidades": "100"
   },
   {
     "id": "Caramelo-Duro-Menta",
@@ -125,7 +168,8 @@
     "nombre": "Caramelo Menta",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Caramelos"
+    "categoria": "Caramelos",
+    "unidades": "100"
   },
   {
     
@@ -134,7 +178,8 @@
     "nombre": "Caramelo Frutilla",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Caramelos"
+    "categoria": "Caramelos",
+    "unidades": "100"
   },
   {
     "id": "Caramelo-Duro-Miel",
@@ -142,7 +187,8 @@
     "nombre": "Caramelo Miel",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Caramelos"
+    "categoria": "Caramelos",
+    "unidades": "100"
   },
   {
     "id": "Megalito-Pintalengua",
@@ -150,7 +196,8 @@
     "nombre": "Chupeton Megalito",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Chupetones"
+    "categoria": "Chupetones",
+    "unidades": "50"
   },
   {
     
@@ -159,7 +206,8 @@
     "nombre": "Chupeton Megalito Frutilla",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Chupetones"
+    "categoria": "Chupetones",
+    "unidades": "50"
   },
   {
     "id": "PityPaleta",
@@ -167,7 +215,8 @@
     "nombre": "Chupeton Pity",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Chupetones"
+    "categoria": "Chupetones",
+    "unidades": "25"
   },
   {
     "id": "ChicleFrutilla",
@@ -175,7 +224,8 @@
     "nombre": "Chicle relleno Frutilla",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Chicles"
+    "categoria": "Chicles",
+    "unidades": "40"
   },
   {
     "id": "ChicleUva",
@@ -183,7 +233,8 @@
     "nombre": "Chicle relleno Uva",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Chicles"
+    "categoria": "Chicles",
+    "unidades": "40"
   },
   {
     "id": "ChicleBanana",
@@ -191,7 +242,8 @@
     "nombre": "Chicle relleno Banana",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Chicles"
+    "categoria": "Chicles",
+    "unidades": "40"
   },
   {
     "id": "ChicleMenta",
@@ -199,7 +251,8 @@
     "nombre": "Chicle relleno Menta",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Chicles"
+    "categoria": "Chicles",
+    "unidades": "40"
   },
   {
     "id": "GoldenChicaChocolate",
@@ -207,7 +260,8 @@
     "nombre": "Barra Chocolate Golden",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Chocolate"
+    "categoria": "Chocolate",
+    "unidades": "20"
   },
   {
     "id": "GoldenChicaMix",
@@ -215,7 +269,8 @@
     "nombre": "Barra Chocolate Golden mix",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Chocolate"
+    "categoria": "Chocolate",
+    "unidades": "20"
   },
   {
     "id": "GoldenGrandeChocolate",
@@ -223,7 +278,8 @@
     "nombre": "Barra Chocolate Golden Grande",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Chocolate"
+    "categoria": "Chocolate",
+    "unidades": "10"
   },
   {
     "id": "GoldenGrandeMix",
@@ -231,7 +287,8 @@
     "nombre": "Barra Chocolate Golden Grande mix",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Chocolate"
+    "categoria": "Chocolate",
+    "unidades": "10"
   },
   {
     "id": "Freegell-menta",
@@ -239,7 +296,8 @@
     "nombre": "Pastilla Freegell Menta",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Pastillas"
+    "categoria": "Pastillas",
+    "unidades": "12"
   },
   {
     "id": "Freegell-Mentol",
@@ -247,7 +305,8 @@
     "nombre": "Pastilla Freegell Mentol",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Pastillas"
+    "categoria": "Pastillas",
+    "unidades": "12"
   },
   {
     "id": "Freegell-Verde",
@@ -255,7 +314,9 @@
     "nombre": "Pastilla Freegell Verde",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Pastillas"
+    "categoria": "Pastillas",
+    "unidades": "12"
+    
   },
   {
     "id": "Freegell-Frutilla",
@@ -263,7 +324,9 @@
     "nombre": "Pastilla Freegell Frutilla",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Pastillas"
+    "categoria": "Pastillas",
+    "unidades": "12"
+   
   },
   {
     "id": "Mentitas",
@@ -271,7 +334,8 @@
     "nombre": "Pastillas mentitas menta",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Pastillas"
+    "categoria": "Pastillas",
+    "unidades": "12"
   },
   {
     "id": "MentitasFrutal",
@@ -279,7 +343,8 @@
     "nombre": "Pastillas mentitas frutal",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Pastillas"
+    "categoria": "Pastillas",
+    "unidades": "12"
   },
   {
     "id": "MentitasTNT",
@@ -287,7 +352,8 @@
     "nombre": "Pastillas mentitas TNT",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Pastillas"
+    "categoria": "Pastillas",
+    "unidades": "12"
   }
   
   
