@@ -27,6 +27,7 @@ import { CarritoService } from '../servicios/carrito.service';
 
 })
 export class Catalogo {
+Object = Object;
 
 @ViewChild(Notificacion) noti!: Notificacion;
 
@@ -47,6 +48,97 @@ productos = productosData;
     this.aplicarFiltros();
   }
 
+  
+
+  filtroSubcategoria = '';
+  categoriaHover = '';
+  supercategoriaHover: string = '';
+
+
+  menuItems = [
+    {
+      label: 'Inicio',
+      link: '/',
+    },
+    {
+      label: 'Productos',
+      submenu: [
+        { label: 'Dulces', link: '/productos/dulces' },
+        { label: 'Bebidas', link: '/productos/bebidas' },
+        { label: 'Ofertas', link: '/productos/ofertas' },
+      ],
+    },
+    {
+      label: 'Categorías',
+      submenu: [
+        { label: 'Chocolates', link: '/categorias/chocolates' },
+        { label: 'Gomitas', link: '/categorias/gomitas' },
+        { label: 'Caramelos', link: '/categorias/caramelos' },
+      ],
+    },
+    {
+      label: 'Contacto',
+      link: '/contacto',
+    },
+  ];
+  filtrarPorCategoria(categoria: string) {
+  this.filtroCategoria = categoria; 
+  this.aplicarFiltros();             
+}
+  filtrarPorSubcategoria(categoria: string, subcategoria: string) {
+  this.filtroCategoria = categoria;
+  this.filtroSubcategoria = subcategoria;
+  this.aplicarFiltros();
+}
+
+get categoriasConSubcategorias(): { [key: string]: string[] } {
+  const mapa: { [key: string]: Set<string> } = {};
+  this.productos.forEach(p => {
+    if (!mapa[p.categoria]) {
+      mapa[p.categoria] = new Set();
+    }
+    if (p.subcategoria) {
+      mapa[p.categoria].add(p.subcategoria);
+    }
+  });
+  const resultado: { [key: string]: string[] } = {};
+  for (const cat in mapa) {
+    resultado[cat] = Array.from(mapa[cat]);
+  }
+  return resultado;
+}
+
+  get supercategoriasMap(): { [key: string]: { [key: string]: string[] } } {
+  const mapa: { [key: string]: { [key: string]: Set<string> } } = {};
+
+  this.productos.forEach(p => {
+    if (!p.supercategoria || !p.categoria) return;
+
+    if (!mapa[p.supercategoria]) {
+      mapa[p.supercategoria] = {};
+    }
+
+    if (!mapa[p.supercategoria][p.categoria]) {
+      mapa[p.supercategoria][p.categoria] = new Set();
+    }
+
+    if (p.subcategoria) {
+      mapa[p.supercategoria][p.categoria].add(p.subcategoria);
+    }
+  });
+
+  const resultado: { [key: string]: { [key: string]: string[] } } = {};
+  for (const supercat in mapa) {
+    resultado[supercat] = {};
+    for (const cat in mapa[supercat]) {
+      resultado[supercat][cat] = Array.from(mapa[supercat][cat]);
+    }
+  }
+
+  return resultado;
+}
+
+
   agregarAlCarrito(producto: any) {
     this.carritoService.agregarAlCarrito(producto);
     this.noti.mostrar(producto);
@@ -59,16 +151,18 @@ productos = productosData;
   }
 
   aplicarFiltros() {
-    this.productosFiltrados = this.productos.filter((p) => {
-      return (
-        (!this.filtroNombre || p.nombre.toLowerCase().includes(this.filtroNombre.toLowerCase())) &&
-        (!this.filtroCategoria || p.categoria === this.filtroCategoria) &&
-        (!this.precioMin || p.precio >= this.precioMin) &&
-        (!this.precioMax || p.precio <= this.precioMax) &&
-        p.precio <= this.precioFiltro
-      );
-    });
-  }
+  this.productosFiltrados = this.productos.filter(p => {
+    return (
+      (!this.filtroNombre || p.nombre.toLowerCase().includes(this.filtroNombre.toLowerCase())) &&
+      (!this.filtroCategoria || p.categoria === this.filtroCategoria) &&
+      (!this.filtroSubcategoria || p.subcategoria === this.filtroSubcategoria) &&
+      (!this.precioMin || p.precio >= this.precioMin) &&
+      (!this.precioMax || p.precio <= this.precioMax) &&
+      p.precio <= this.precioFiltro
+    );
+  });
+}
+
 
   obtenerPrecioMaximo(): number {
     if (!this.productos || this.productos.length === 0) return 1000;
@@ -85,5 +179,3 @@ productos = productosData;
   }
 
 }
-
-

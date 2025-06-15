@@ -1,0 +1,27 @@
+.descuento-tag {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(0,0,0,0.6);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+.tag-normal {
+  background-color: #f39c12;
+  box-shadow: 0 0 8px #f39c12;
+}
+
+.tag-limitada {
+  background-color: #c0392b; 
+  box-shadow: 0 0 8px #c0392b;
+}
+
+.tag-super {
+  background-color: #27ae60; 
+  box-shadow: 0 0 8px #27ae60;
+}

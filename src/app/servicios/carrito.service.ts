@@ -20,12 +20,16 @@ export class CarritoService {
   }
 
   quitarDelCarrito(producto: any) {
-    const index = this.carrito.findIndex(p => p.id === producto.id);
-    if (index > -1) {
+  const index = this.carrito.findIndex(p => p.id === producto.id);
+  if (index > -1) {
+    if (this.carrito[index].cantidad > 1) {
+      this.carrito[index].cantidad--;
+    } else {
       this.carrito.splice(index, 1);
-      this.carritoSubject.next(this.carrito);
     }
+    this.carritoSubject.next(this.carrito);
   }
+}
 
   obtenerCarrito() {
     return this.carrito;

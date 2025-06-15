@@ -1,0 +1,149 @@
+:host {
+  display: block;
+  width: 100%;
+  min-height: 600px;
+  font-family: 'Fredoka One', cursive;
+  background: #fff0f6;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #880e4f;
+}
+
+.contact-info {
+  flex: 1 1 280px;
+  background: #fce4ec;
+  border-radius: 12px;
+  padding: 30px 25px;
+  box-shadow: 0 0 12px #ff4081aa;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-info h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #d81b60;
+  text-align: left;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.info-item mat-icon {
+  color: #d81b60;
+  font-size: 28px;
+}
+
+.lottie-contact {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 120px;
+  height: 120px;
+  pointer-events: none;
+}
+
+.contact-form {
+  flex: 1 1 380px;
+  background: #fce4ec;
+  border-radius: 12px;
+  padding: 30px 25px;
+  box-shadow: 0 0 12px #ff4081aa;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form h2 {
+  font-size: 26px;
+  color: #d81b60;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+}
+
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  background: #d81b60;
+  color: white;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px #ff4081cc;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #ad1457;
+  box-shadow: 0 8px 16px #ff4081ee;
+}
+
+.submit-btn:disabled {
+  background: #f48fb1;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+mat-form-field {
+  width: 100%;
+}
+.developer-panel {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 2px dashed #ff4081aa;
+    text-align: center;
+    font-family: "Fredoka One", cursive;
+    color: #880e4f;
+    background: #fce4ec;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #ff408180;
+    height: 350px;
+    
+}
+.dev-info {
+    margin-top: 15px;
+}
+.dev-info .info-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 5px 0;
+}
+.lottie-dev{
+    margin: 20px auto 0 auto;
+    width: 200px;
+    height: 200px;
+}
+.icono {
+    margin-right: 6px;
+    margin-top: 20px;
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+    
+}

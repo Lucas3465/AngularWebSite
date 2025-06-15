@@ -4,13 +4,15 @@
     <button class="cerrar" (click)="cerrarCarrito()">×</button>
   </div>
 
-  <div class="carrito-contenido" *ngIf="carrito.length > 0; else vacio">
-    <div class="item-carrito" *ngFor="let producto of carrito">
-      <img [src]="producto.imagen" alt="{{ producto.nombre }}" />
-      <div class="detalle">
-        <h4>{{ producto.nombre }}</h4>
-        <p class="precio">${{ producto.precio }} x {{ producto.cantidad }}</p>
-        <button (click)="eliminarDelCarrito(producto)">Quitar</button>
+  <ng-container *ngIf="carrito.length > 0; else vacio">
+    <div class="carrito-items-scroll">
+      <div class="item-carrito" *ngFor="let producto of carrito">
+        <img [src]="producto.imagen" alt="{{ producto.nombre }}" />
+        <div class="detalle">
+          <h4>{{ producto.nombre }}</h4>
+          <p class="precio">${{ producto.precio }} x {{ producto.cantidad }}</p>
+          <button (click)="eliminarDelCarrito(producto)">Quitar</button>
+        </div>
       </div>
     </div>
 
@@ -18,7 +20,7 @@
       <p>Total: ${{ obtenerTotal() }}</p>
       <button class="btn-comprar" (click)="irACheckout()">Finalizar Compra</button>
     </div>
-  </div>
+  </ng-container>
 
   <ng-template #vacio>
     <p class="carrito-vacio">Tu carrito está vacío 🍬</p>

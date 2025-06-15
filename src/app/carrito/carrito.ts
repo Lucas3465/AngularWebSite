@@ -6,6 +6,8 @@ import { trigger, transition, style, animate } from "@angular/animations";
 import { Input } from "@angular/core";
 import { Output, EventEmitter } from "@angular/core";
 import { CarritoService } from '../servicios/carrito.service';
+import { Routes, Router } from '@angular/router';
+
 
 @Component({
   selector: 'carrito',
@@ -16,8 +18,8 @@ import { CarritoService } from '../servicios/carrito.service';
 export class Carrito {
   @Input() mostrar = false;
   @Output() cerrar = new EventEmitter<void>();
-
-  constructor(public carritoService: CarritoService) {}
+  
+  constructor(public carritoService: CarritoService, private router: Router) {}
 
   cerrarCarrito() {
     this.cerrar.emit();
@@ -36,5 +38,8 @@ export class Carrito {
   }
   irACheckout() {
     console.log("Ir a checkout");
+    this.router.navigate(['/checkout']);
   }
+
+  
 }

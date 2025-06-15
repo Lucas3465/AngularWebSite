@@ -151,7 +151,8 @@
     "categoria": "Alfajores",
     "unidades": "18",
     "nuevo": true,
-    "descuento": 10
+    "descuento": "10",
+    "tipo": "normal"
   },
   {
     "id": "Caramelo-Duro-Frutal",
@@ -160,7 +161,9 @@
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
     "categoria": "Caramelos",
-    "unidades": "100"
+    "unidades": "100",
+    "descuento": "50",
+    "tipo": "super"
   },
   {
     "id": "Caramelo-Duro-Menta",
@@ -169,7 +172,9 @@
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
     "categoria": "Caramelos",
-    "unidades": "100"
+    "unidades": "100",
+    "descuento": "30",
+    "tipo": "normal"
   },
   {
     
@@ -179,7 +184,9 @@
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
     "categoria": "Caramelos",
-    "unidades": "100"
+    "unidades": "100",
+    "descuento": "70",
+    "tipo": "limitada"
   },
   {
     "id": "Caramelo-Duro-Miel",
@@ -188,7 +195,9 @@
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
     "categoria": "Caramelos",
-    "unidades": "100"
+    "unidades": "100",
+    "descuento": "40",
+    "tipo": "normal"
   },
   {
     "id": "Megalito-Pintalengua",
@@ -197,7 +206,9 @@
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
     "categoria": "Chupetones",
-    "unidades": "50"
+    "unidades": "50",
+    "descuento": "90",
+    "tipo": "limitada"
   },
   {
     
@@ -207,7 +218,10 @@
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
     "categoria": "Chupetones",
-    "unidades": "50"
+    "unidades": "50",
+    "descuento": "60",
+    "tipo": "super"
+  
   },
   {
     "id": "PityPaleta",
@@ -288,6 +302,7 @@
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
     "categoria": "Chocolate",
+    
     "unidades": "10"
   },
   {
@@ -297,6 +312,7 @@
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
     "categoria": "Pastillas",
+    "supercategoria": "Golosinas",
     "unidades": "12"
   },
   {
@@ -305,7 +321,9 @@
     "nombre": "Pastilla Freegell Mentol",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Pastillas",
+    "categoria": "Velas",
+    "categoriaPrincipal": "Velas azules",
+    "supercategoria": "Cotillon",
     "unidades": "12"
   },
   {
@@ -315,7 +333,13 @@
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
     "categoria": "Pastillas",
-    "unidades": "12"
+    "unidades": "12",
+    "supercategoria": "Golosinas",
+    "categoriaPrincipal": "Ropa",
+    "descuento": {
+      "tipo": "normal",
+      "texto": "30% OFF"
+    }
     
   },
   {
@@ -324,8 +348,16 @@
     "nombre": "Pastilla Freegell Frutilla",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Pastillas",
-    "unidades": "12"
+    "categoria": "Medias",
+    "unidades": "12",
+    "supercategoria": "Ropa",
+    "subcategoria": "soquetes",
+    "categoriaPrincipal": "medias",
+    "descuento": {
+      "tipo": "limitada",
+      "texto": "70% OFF"
+    }
+
    
   },
   {
@@ -334,8 +366,14 @@
     "nombre": "Pastillas mentitas menta",
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
-    "categoria": "Pastillas",
-    "unidades": "12"
+    "categoria": "Globos",
+    "subcategoria": "Globo azul",
+    "unidades": "12",
+    "supercategoria": "Cotillon",
+    "descuento": {
+      "tipo": "super",
+      "texto": "50% OFF"
+    }
   },
   {
     "id": "MentitasFrutal",
@@ -344,7 +382,13 @@
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
     "categoria": "Pastillas",
-    "unidades": "12"
+    "unidades": "12",
+    "subcategoria": "Pastilla TNT",
+    "supercategoria": "Golosinas",
+    "descuento": {
+      "tipo": "super",
+      "texto": "50% OFF"
+    }
   },
   {
     "id": "MentitasTNT",
@@ -353,7 +397,13 @@
     "precio": 185,
     "imagen": "assets/golosinas/finigusano.png",
     "categoria": "Pastillas",
-    "unidades": "12"
+    "subcategoria": "Pastilla TNT",
+    "supercategoria": "Golosinas",
+    "unidades": "12",
+    "descuento": {
+      "tipo": "super",
+      "texto": "50% OFF"
+    }
   }
   
   

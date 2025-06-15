@@ -15,8 +15,8 @@
     <a routerLink="/catalogo" routerLinkActive="router-link-active"> 
       <mat-icon class="navicon">shop</mat-icon>Tienda 
     </a>
-    <a routerLink="/catalogo" routerLinkActive="router-link-active"> 
-      <mat-icon class="navicon">location_city</mat-icon>Locales 
+    <a routerLink="/locales" routerLinkActive="router-link-active"> 
+      <mat-icon class="navicon">wifi_calling_3</mat-icon>Contacto 
     </a>
     <div class="car" (click)="toggleCarrito()" style="position: relative;">
       <mat-icon class="navicon">
@@ -29,7 +29,9 @@
   </div>
 </div>
 
-
+  <div *ngIf="isLoading" class="loading-overlay">
+      <ng-lottie [options]="lottieOptions"></ng-lottie>
+  </div>
 
 
 <router-outlet></router-outlet>
@@ -49,17 +51,9 @@
                         <img src="assets/iconos/logohd.png" alt="pielogo">
                         
                     </a>
-                    <!-- <img class="bandera" src="assets/iconos/bandera.png" alt=""> -->
+                     
                 </figure>
             </div>
-            <div class="boxpie">
-                <h2>Desarrollador web</h2>
-                <p>Lucas Bonilla</p>
-                <p>Telefono: +598 96 302 355</p>
-                <p>Correo Electronico: splasbonilla&#64;gmail.com</p>
-                
-            </div>
-
             <div class="boxpie">
                 <h2>Redes Sociales</h2>
                 <div class="red-social">
@@ -72,9 +66,14 @@
                 <h2><mat-icon>local_shipping</mat-icon>099841160</h2>   
                 <img class="Tarjetas" src="assets/iconos/Metodos_Tarjetas.png" alt="">
             </div>
+            <div class="boxpie">
+                    <a href="#" class="mides">
+                      <img src="assets/iconos/mides.png" alt="">
+                    </a>
+              </div> 
         </div>
         <div class="grupo2">
             <small>&copy; 2025 <b>Dulcemania</b> - Todos los Derechos Reservados</small>
         </div>
-
+               
 </footer>

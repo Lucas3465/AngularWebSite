@@ -1,0 +1,65 @@
+<div class="contact-container">
+  <div class="contact-info">
+    <h2>Contacto Dulcemania</h2>
+    <div class="info-item">
+      <mat-icon>location_on</mat-icon>
+      <p>Av. Blandengues 301, Salto, Uruguay</p>
+    </div>
+    <div class="info-item">
+      <mat-icon>phone</mat-icon>
+      <p>+598 96 302 355</p>
+    </div>
+    <div class="info-item">
+      <mat-icon>access_time</mat-icon>
+      <p>Lun - Sab: 09:00 - 13:00 | 16:00 - 20:00</p>
+    </div>
+    <div class="lottie-contact" id="lottie-contact"></div>
+  </div>
+
+  <form (ngSubmit)="submitForm()" #contactForm="ngForm" class="contact-form">
+    <h2>Envíanos un mensaje</h2>
+
+    <mat-form-field appearance="fill" class="input-field">
+      <mat-label>Nombre</mat-label>
+      <input matInput type="text" name="nombre" [(ngModel)]="formData.nombre" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="input-field">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" name="email" [(ngModel)]="formData.email" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="input-field">
+      <mat-label>Mensaje</mat-label>
+      <textarea matInput name="mensaje" [(ngModel)]="formData.mensaje" required></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="!contactForm.form.valid" class="submit-btn">
+      <mat-icon>send</mat-icon>
+      Enviar
+    </button>
+  </form>
+</div>
+
+<div class="developer-panel">
+  <h2>Desarrollador Web</h2>
+  <div class="dev-info">
+    <div class="info-item">
+      <mat-icon class="icono">person</mat-icon>
+      <p>Lucas Bonilla (Desarrollador)</p>
+    </div>
+    <div class="info-item">
+      <mat-icon class="icono">email</mat-icon>
+      <p>splasbonilla&#64;gmail.com</p>
+    </div>
+    <div class="info-item">
+      <mat-icon class="icono">language</mat-icon>
+      <p>https://github.com/Lucas3465</p>
+    </div>
+    <div class="info-item">
+      <mat-icon class="icono">phone</mat-icon>
+      <p>+598 96 302 355</p>
+    </div>
+  </div>
+  <div id="lottie-dev" class="lottie-dev"></div>
+</div>

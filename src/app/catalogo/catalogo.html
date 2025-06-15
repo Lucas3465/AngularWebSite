@@ -1,29 +1,48 @@
+
+<nav class="menu-categorias">
+  <ul>
+    <li *ngFor="let supercat of Object.keys(supercategoriasMap)"
+        class="menu-item"
+        (mouseenter)="supercategoriaHover = supercat"
+        (mouseleave)="supercategoriaHover = ''">
+
+      <a href="#" (click)="supercategoriaHover = supercat; $event.preventDefault()">
+        {{ supercat }}
+      </a>
+
+      <ul *ngIf="supercategoriaHover === supercat" class="submenu-categorias">
+        <li *ngFor="let cat of Object.keys(supercategoriasMap[supercat])"
+            (mouseenter)="categoriaHover = cat"
+            (mouseleave)="categoriaHover = ''"
+            class="submenu-categoria-item">
+          <a href="#" (click)="filtrarPorCategoria(cat); $event.preventDefault()">{{ cat }}<mat-icon class="categoriasicono">navigate_next</mat-icon></a>
+
+          <ul *ngIf="categoriaHover === cat" class="submenu-subcategorias">
+            <li>
+              <a href="#" (click)="filtrarPorCategoria(cat); $event.preventDefault()">Ver todos</a>
+            </li>
+            <li *ngFor="let subcat of supercategoriasMap[supercat][cat]">
+              <a href="#" (click)="filtrarPorSubcategoria(cat, subcat); $event.preventDefault()">
+                {{ subcat }}
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    </li>
+  </ul>
+</nav>
+
+
+
+
+
+
+
+
 <div class="catalogo">
   <div class="filtros">
-    <div class="filtro-item">
-      <span class="iconify icono" data-icon="mdi:magnify" title="Buscar" aria-hidden="true"></span>
-      <input
-        type="text"
-        [(ngModel)]="filtroNombre"
-        (ngModelChange)="aplicarFiltros()"
-        placeholder="Buscar por nombre"
-        aria-label="Buscar por nombre"
-
-      />
-        
-
-    </div>
-
-    <div class="filtro-item">
-      <span class="iconify icono" data-icon="mdi:shape-outline" title="Categoría" aria-hidden="true"></span>
-      <select [(ngModel)]="filtroCategoria" aria-label="Filtrar por categoría" (ngModelChange)="aplicarFiltros()">
-        <option value="">Todas las categorías</option>
-        <option *ngFor="let categoria of obtenerCategorias()" [value]="categoria">
-          {{ categoria }}
-        </option>
-      </select>
-    </div>
-
     <div class="filtro-item">
       <span class="iconify icono" data-icon="mdi:cash-minus" title="Precio mínimo" aria-hidden="true"></span>
       <input
@@ -35,7 +54,6 @@
         min="0"
       />
     </div>
-
     <div class="filtro-item">
       <span class="iconify icono" data-icon="mdi:cash-plus" title="Precio máximo" aria-hidden="true"></span>
       <input
@@ -49,18 +67,7 @@
     </div>
 
 
-    <label for="filtroPrecio" class="sr-only">Filtrar por precio</label>
-        <input
-        type="range"
-        id="filtroPrecio"
-        min="0"
-        [max]="precioMaximo"
-        [(ngModel)]="precioFiltro"
-        (input)="filtrarPorPrecio()"
-        />
-        <span class="precio-actual">${{ precioFiltro }}</span>
-
-    <!-- <button class="btn-aplicar" (click)="aplicarFiltros()">Aplicar filtros</button> -->
+   
 
   </div>
 

@@ -1,0 +1,153 @@
+<div class="checkout-wrapper">
+  <div class="checkout-info-container" #infoContainer>
+    <h3><mat-icon>person</mat-icon> Datos del comprador</h3>
+
+    <label #inputGroup>
+      <mat-icon>local_shipping</mat-icon> ¿Cómo recibirá la compra?
+      <select [(ngModel)]="formaEntrega">
+        <option value="retiro">Retiro en local</option>
+        <option value="envio">Envío a domicilio</option>
+      </select>
+    </label>
+
+    <label #inputGroup>Nombre
+      <input type="text" [(ngModel)]="datosComprador.nombre">
+    </label>
+
+    <label #inputGroup>Apellido
+      <input type="text" [(ngModel)]="datosComprador.apellido">
+    </label > 
+
+    <label #inputGroup>Documento de identidad
+      <input type="text" [(ngModel)]="datosComprador.documento">
+    </label>
+
+    <label #inputGroup>Dirección
+      <input type="text" [(ngModel)]="datosComprador.direccion" [disabled]="formaEntrega === 'retiro'">
+    </label>
+
+    <label #inputGroup>Calle y número
+      <input type="text" [(ngModel)]="datosComprador.calle" [disabled]="formaEntrega === 'retiro'">
+    </label>
+
+    <label #inputGroup>Ciudad
+      <input type="text" [(ngModel)]="datosComprador.ciudad" [disabled]="formaEntrega === 'retiro'">
+    </label>
+
+    <label #inputGroup>Departamento
+      <input type="text" [(ngModel)]="datosComprador.departamento" [disabled]="formaEntrega === 'retiro'">
+    </label>
+
+    <label #inputGroup>Teléfono
+      <input type="text" [(ngModel)]="datosComprador.telefono">
+    </label>
+
+    <label #inputGroup>Email
+      <input type="email" [(ngModel)]="datosComprador.email">
+    </label>
+
+    
+    <label #inputGroup>
+        <mat-icon>receipt</mat-icon>
+      <input type="checkbox" [(ngModel)]="usarRUT"> ¿Facturar con RUT?
+    </label>
+
+    <div *ngIf="usarRUT">
+      <label #inputGroup>Razón social
+        <input type="text" [(ngModel)]="datosComprador.razonSocial">
+      </label>
+
+      <label #inputGroup>Código RUT
+        <input type="text" [(ngModel)]="datosComprador.rut">
+      </label>
+    </div>
+
+    <label #inputGroup>
+        <mat-icon>download</mat-icon>
+      <input type="checkbox" [(ngModel)]="descargarPDF"> ¿Desea descargar un archivo PDF del recibo?
+    </label>
+
+    <h4><mat-icon>credit_card</mat-icon>Forma de pago</h4>
+    <label #inputGroup *ngIf="formaEntrega === 'retiro'">
+      <input type="radio" name="pago" value="efectivo" [(ngModel)]="formaPago"> Efectivo
+    </label>
+    <label #inputGroup>
+      <input type="radio" name="pago" value="tarjeta" [(ngModel)]="formaPago"> Tarjeta crédito/débito
+    </label>
+    <label #inputGroup>
+      <input type="radio" name="pago" value="transferencia" [(ngModel)]="formaPago"> Transferencia bancaria
+    </label>
+    <label #inputGroup>
+      <input type="radio" name="pago" value="redpagos" [(ngModel)]="formaPago"> Abitab / RedPagos
+    </label>
+  </div>
+
+<div class="checkout-container" #reciboContainer>
+  <div class="checkout-title">
+    <mat-icon>shopping_cart</mat-icon>
+    Finalizar Compra
+  </div>
+
+  <div class="lottie-container">
+    <ng-lottie [options]="lottieOptions"></ng-lottie>
+  </div>
+
+ <div *ngFor="let producto of carrito; let i = index" 
+     class="producto-checkout" 
+     #productoEl>
+
+  <img [src]="producto.imagen" alt="{{ producto.nombre }}" class="producto-imagen" />
+
+  <div class="producto-detalle">
+    <p class="producto-nombre">{{ producto.nombre }} x{{ producto.cantidad }}</p>
+    <p class="producto-precio">${{ producto.precio * producto.cantidad }}</p>
+  </div>
+
+  <button mat-icon-button (click)="animarYEliminar(productoEl, producto)">
+    <mat-icon>delete</mat-icon>
+  </button>
+</div>
+
+  <div class="total">
+    Total: ${{ total }}
+  </div>
+
+  <button class="btn-finalizar" (click)="finalizarCompra()">
+    <mat-icon>check_circle</mat-icon> Confirmar compra
+  </button>
+  <div *ngIf="mostrarAnimacionPDF" class="pdf-loader">
+    <ng-lottie [options]="lottieCargandoPDF"></ng-lottie>
+    <p>Generando Comprobante...</p>
+  </div>
+  <div #reciboContainer class="recibo-container" style="display: none">
+  <h2>🧾 Comprobante de compra - Dulcemanía</h2>
+  <p><strong>Nombre:</strong> {{ datosComprador.nombre }} {{ datosComprador.apellido }}</p>
+  <p><strong>Documento:</strong> {{ datosComprador.documento }}</p>
+  <p *ngIf="formaEntrega === 'envio'">
+    <strong>Dirección:</strong> {{ datosComprador.calle }}, {{ datosComprador.ciudad }}, {{ datosComprador.departamento }}
+  </p>
+  <p><strong>Email:</strong> {{ datosComprador.email }}</p>
+  <p><strong>Teléfono:</strong> {{ datosComprador.telefono }}</p>
+  <p><strong>Forma de pago:</strong> {{ formaPago }}</p>
+  <p><strong>Entrega:</strong> {{ formaEntrega === 'envio' ? 'Envío a domicilio' : 'Retiro en local' }}</p>
+
+  <hr />
+
+  <h3>Productos comprados:</h3>
+  <ul>
+    <li *ngFor="let p of carrito">
+      {{ p.nombre }} x{{ p.cantidad }} — ${{ p.precio * p.cantidad }}
+    </li>
+  </ul>
+
+  <hr />
+  <h3>Total: ${{ total }}</h3>
+  <p style="font-size: 12px; color: #666;">Gracias por tu compra ❤</p>
+</div>
+
+  
+</div>
+
+
+</div>
+
