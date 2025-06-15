@@ -1,0 +1,294 @@
+[
+  {
+    "id": "Fini-Gusano",
+    "variante": "Gusano",
+    "nombre": "Gomita fini gusano",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "gomitas"
+  },
+  {
+    "id": "Docile-Gusano",
+    "variante": "Gusano",
+    "nombre": "Gomita Docile gusano",
+    "precio": 165,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "gomitas"
+  },
+  {
+    "id": "Docile-Diente",
+    "variante": "Diente",
+    "nombre": "Gomitas Docile diente",
+    "precio": 165,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "gomitas"
+  },
+  {
+    "id": "Docile-Mora",
+    "variante": "Mora",
+    "nombre": "Gomitas Docile Mora",
+    "precio": 165,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "gomitas"
+  },
+  {
+    "id": "Docile-Fiesta",
+    "variante": "Fiesta",
+    "nombre": "Gomitas Docile Fiesta",
+    "precio": 165,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "gomitas"
+  },
+  {
+    "id": "Docile-Beso",
+    "variante": "Beso",
+    "nombre": "Gomitas Docile Beso",
+    "precio": 165,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "gomitas"
+  },
+  {
+    "id": "Fini-malvavisco-torneado-Azul",
+    "variante": "torneado azul",
+    "nombre": "Fini Malvavisco Torneado",
+    "precio": 145,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "malvavisco"
+  },
+  {
+    "id": "Fini-malvavisco-torneado-Rosa",
+    "variante": "torneado rosa",
+    "nombre": "Fini Malvavisco Torneado",
+    "precio": 145,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "malvavisco"
+  },
+  {
+    "id": "Fini-malvavisco-volcan-Rosa",
+    "variante": "volcan rosa",
+    "nombre": "Fini Malvavisco Volcan",
+    "precio": 145,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "malvavisco"
+  },
+  {
+    "id": "Fini-malvavisco-volcan-Azul",
+    "variante": "torneado azul",
+    "nombre": "Fini Malvavisco volcan",
+    "precio": 145,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "malvavisco"
+  },
+  {
+    "id": "Portezuelo-Chocolate-comun",
+    "variante": "Chocolate",
+    "nombre": "Portezuelo Alfajor Chocolate",
+    "precio": 360,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Alfajores"
+  },
+  {
+    "id": "Portezuelo-ChocolateBlanco-comun",
+    "variante": "Chocolate Blanco",
+    "nombre": "Portezuelo Alfajor Blanco",
+    "precio": 360,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Alfajores"
+  },
+  {
+    "id": "Portezuelo-Nieve-comun",
+    "variante": "Nieve",
+    "nombre": "Portezuelo Alfajor Nieve",
+    "precio": 360,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Alfajores"
+  },
+  {
+    "id": "Portezuelo-ChocolateOro-comun",
+    "variante": "ChocolateOro",
+    "nombre": "Portezuelo Alfajor Oro",
+    "precio": 360,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Alfajores"
+  },
+  {
+    "id": "Caramelo-Duro-Frutal",
+    "variante": "Frutal",
+    "nombre": "Caramelo Duro Frutal",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Caramelos"
+  },
+  {
+    "id": "Caramelo-Duro-Menta",
+    "variante": "Menta",
+    "nombre": "Caramelo Menta",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Caramelos"
+  },
+  {
+    
+    "id": "Caramelo-Duro-Frutilla",
+    "variante": "Frutilla",
+    "nombre": "Caramelo Frutilla",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Caramelos"
+  },
+  {
+    "id": "Caramelo-Duro-Miel",
+    "variante": "Miel",
+    "nombre": "Caramelo Miel",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Caramelos"
+  },
+  {
+    "id": "Megalito-Pintalengua",
+    "variante": "Pintalengua",
+    "nombre": "Chupeton Megalito",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Chupetones"
+  },
+  {
+    
+    "id": "Megalito-Frutilla",
+    "variante": "Frutilla",
+    "nombre": "Chupeton Megalito Frutilla",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Chupetones"
+  },
+  {
+    "id": "PityPaleta",
+    "variante": "Frutal",
+    "nombre": "Chupeton Pity",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Chupetones"
+  },
+  {
+    "id": "ChicleFrutilla",
+    "variante": "Frutilla",
+    "nombre": "Chicle relleno Frutilla",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Chicles"
+  },
+  {
+    "id": "ChicleUva",
+    "variante": "Uva",
+    "nombre": "Chicle relleno Uva",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Chicles"
+  },
+  {
+    "id": "ChicleBanana",
+    "variante": "Banana",
+    "nombre": "Chicle relleno Banana",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Chicles"
+  },
+  {
+    "id": "ChicleMenta",
+    "variante": "Menta",
+    "nombre": "Chicle relleno Menta",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Chicles"
+  },
+  {
+    "id": "GoldenChicaChocolate",
+    "variante": "Chocolate",
+    "nombre": "Barra Chocolate Golden",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Chocolate"
+  },
+  {
+    "id": "GoldenChicaMix",
+    "variante": "Mix",
+    "nombre": "Barra Chocolate Golden mix",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Chocolate"
+  },
+  {
+    "id": "GoldenGrandeChocolate",
+    "variante": "Chocolate",
+    "nombre": "Barra Chocolate Golden Grande",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Chocolate"
+  },
+  {
+    "id": "GoldenGrandeMix",
+    "variante": "Mix",
+    "nombre": "Barra Chocolate Golden Grande mix",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Chocolate"
+  },
+  {
+    "id": "Freegell-menta",
+    "variante": "Menta",
+    "nombre": "Pastilla Freegell Menta",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Pastillas"
+  },
+  {
+    "id": "Freegell-Mentol",
+    "variante": "Mentol",
+    "nombre": "Pastilla Freegell Mentol",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Pastillas"
+  },
+  {
+    "id": "Freegell-Verde",
+    "variante": "Verde",
+    "nombre": "Pastilla Freegell Verde",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Pastillas"
+  },
+  {
+    "id": "Freegell-Frutilla",
+    "variante": "Frutilla",
+    "nombre": "Pastilla Freegell Frutilla",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Pastillas"
+  },
+  {
+    "id": "Mentitas",
+    "variante": "Menta",
+    "nombre": "Pastillas mentitas menta",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Pastillas"
+  },
+  {
+    "id": "MentitasFrutal",
+    "variante": "Frutal",
+    "nombre": "Pastillas mentitas frutal",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Pastillas"
+  },
+  {
+    "id": "MentitasTNT",
+    "variante": "TNT",
+    "nombre": "Pastillas mentitas TNT",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Pastillas"
+  }
+  
+  
+]
