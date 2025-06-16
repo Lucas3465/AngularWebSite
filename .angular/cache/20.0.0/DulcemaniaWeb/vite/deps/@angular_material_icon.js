@@ -2,12 +2,12 @@ import {
   DomSanitizer,
   HttpClient
 } from "./chunk-2TGFNCHP.js";
-import "./chunk-BSU7VACE.js";
 import {
   MatCommonModule
-} from "./chunk-UNKZZ4CY.js";
-import "./chunk-UXQ5MLUC.js";
+} from "./chunk-N3CRIB4U.js";
 import "./chunk-6ZDJLZZF.js";
+import "./chunk-UXQ5MLUC.js";
+import "./chunk-BSU7VACE.js";
 import "./chunk-LLTUG34N.js";
 import {
   ChangeDetectionStrategy,
