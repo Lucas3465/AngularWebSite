@@ -36,13 +36,6 @@ export class Locales implements OnInit {
         path: "assets/dulce.json",
     });
 
-    lottie.loadAnimation({
-        container: document.getElementById("lottie-dev")!,
-        renderer: "svg",
-        loop: true,
-        autoplay: true,
-        path: "assets/conejo.json", 
-    });
   };
 
  
