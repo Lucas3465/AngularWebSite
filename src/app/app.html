@@ -1,13 +1,11 @@
 <title>Dulcemania</title>
 
 
-<div class="nav" [class.active]="menuOpen">
+<div class="nav">
   <div class="logo">
     <img routerLink="/inicio" routerLinkActive="router-link-active" src="assets/iconos/logohd.png" alt="">
   </div>
-  <div class="hamburger" (click)="menuOpen = !menuOpen">
-    <mat-icon>menu</mat-icon>
-  </div>
+
   <div class="nav-links">
     <a routerLink="/inicio" routerLinkActive="router-link-active"> 
       <mat-icon class="navicon">home</mat-icon>Inicio 
@@ -21,7 +19,7 @@
     <div class="car" (click)="toggleCarrito()" style="position: relative;">
       <mat-icon class="navicon">
         {{ mostrarCarrito ? "close" : "shopping_bag"}}</mat-icon>
-        <span
+      <span
         *ngIf="cantidadTotal > 0"
         class="badge"
         >{{ cantidadTotal > 99 ? '+99' : cantidadTotal }}</span>

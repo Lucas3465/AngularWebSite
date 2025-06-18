@@ -22,7 +22,6 @@ import { Routes } from '@angular/router';
 export class App {
   protected title = 'Dulcemania';
   protected compra = "Comprar";
-  menuOpen = false;
   isLoading = false;
 
    lottieOptions: AnimationOptions = {

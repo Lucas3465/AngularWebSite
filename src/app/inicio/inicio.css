@@ -835,21 +835,17 @@ section {
   transform: translateZ(80px) scale(1.15) rotateY(0deg);
   z-index: 10;
 }
-
 .producto:not(.activo) {
   filter: brightness(0.5);
   transform-style: preserve-3d;
  
 }
-
 .producto:nth-child(odd):not(.activo) {
   transform: translateZ(0) rotateY(15deg);
 }
-
 .producto:nth-child(even):not(.activo) {
   transform: translateZ(0) rotateY(-15deg);
 }
-
 app-etiquetaoferta {
   position: absolute;
   top: 12px;
@@ -857,7 +853,6 @@ app-etiquetaoferta {
   z-index: 20; 
   user-select: none;
   -webkit-user-select: none;
-
   background-color: rgba(255, 69, 0, 0.85); 
   color: white;
   font-weight: 700;
@@ -900,10 +895,6 @@ app-etiquetaoferta {
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.05);
 }
-
-
-
-
 @keyframes glow {
   0%, 100% {
     box-shadow: 0 0 5px 2px rgba(235, 155, 45, 0.7);
