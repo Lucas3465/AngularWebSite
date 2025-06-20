@@ -9,12 +9,12 @@ import { Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationErr
 import Lottie, { AnimationItem } from 'lottie-web';
 import { LottieComponent, AnimationOptions } from 'ngx-lottie';
 import { Routes } from '@angular/router';
-
+import { Menuhamburguesa } from './menuhamburguesa/menuhamburguesa';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MatIconModule, RouterLink, Carrito, CommonModule, LottieComponent],
+  imports: [RouterOutlet, MatIconModule, RouterLink, Carrito, CommonModule, LottieComponent, Menuhamburguesa],
   templateUrl: './app.html',
   styleUrl: './app.css',
   

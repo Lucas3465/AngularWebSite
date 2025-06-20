@@ -1,0 +1,198 @@
+
+.hamburguesa-btn {
+  position: static;
+  top: 1rem;
+  left: 1rem;
+  background: #f28ab2; 
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(242, 138, 178, 0.3);
+  transition: background-color 0.3s ease;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 40px;
+  width: 46px;
+}
+
+.hamburguesa-btn:hover {
+  background: #f45c8a; 
+}
+
+.hamburguesa-btn mat-icon {
+  color: white;
+  font-size: 30px;
+  
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(242, 138, 178, 0.3);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1050;
+}
+
+.menu-overlay.activo {
+  opacity: 1;
+  pointer-events: all;
+  overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+}
+.menu-panel {
+  position: fixed;
+  top: 0; left: 0;
+  width: 75vw;
+  max-width: 320px;
+  height: 100vh;
+  background: #fff0f5; 
+  box-shadow: 4px 0 15px rgba(242, 138, 178, 0.4);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transform: translateX(-100%);
+  transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  overflow-y: auto;
+  overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 3rem;
+}
+.menu-panel::-webkit-scrollbar {
+  width: 7px;
+  display: none;
+}
+
+.menu-panel::-webkit-scrollbar-thumb {
+  background-color: #f28ab2;
+  border-radius: 4px;
+}
+
+.menu-panel::-webkit-scrollbar-track {
+  background-color: #fff0f5;
+}
+.menu-panel.abierto {
+  transform: translateX(0);
+}
+.cerrar {
+  align-self: flex-end;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
+  margin-bottom: 1.5rem;
+  color: #f45c8a;
+  transition: color 0.2s ease;
+}
+
+.cerrar:hover {
+  color: #d13d6e;
+}
+
+.cerrar mat-icon {
+  font-size: 30px;
+}
+
+.menu-panel nav {
+  flex-grow: 1;
+  overflow-y: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #8a2f5b;
+  padding-bottom: 3rem;
+}
+
+.menu-panel nav > a {
+  display: block;
+  padding: 0.7rem 0;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #c85a7a;
+  text-decoration: none;
+  border-bottom: 1px solid #f2c2d3;
+  transition: color 0.25s ease;
+}
+
+.menu-panel nav > a:hover {
+  color: #f45c8a;
+}
+
+.menu-panel h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
+  color: #e96394;
+  font-weight: 700;
+  font-size: 1.25rem;
+  border-bottom: 2px solid #f28ab2;
+  padding-bottom: 0.3rem;
+}
+
+
+.menu-panel strong {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+  color: #bf5072;
+  font-size: 1.1rem;
+}
+
+
+.menu-panel ul {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+
+.menu-panel li button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.35rem 0;
+  font-size: 1rem;
+  color: #a83a5c;
+  width: 100%;
+  text-align: left;
+  transition: color 0.2s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu-panel li button:hover {
+  color: #f45c8a;
+  text-decoration: underline;
+}
+.menu-panel nav::-webkit-scrollbar {
+  width: 7px;
+}
+
+.menu-panel nav::-webkit-scrollbar-thumb {
+  background-color: #f28ab2;
+  border-radius: 4px;
+}
+
+
+.menu-panel nav::-webkit-scrollbar-track {
+  background-color: #fff0f5;
+}
+
+
+@media (min-width: 769px) {
+  .hamburguesa-btn {
+    display: none;
+  }
+
+}

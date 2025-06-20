@@ -357,8 +357,23 @@
       "tipo": "limitada",
       "texto": "70% OFF"
     }
-
-   
+  },
+  {
+    
+    "id": "Medias Largas",
+    "variante": "Frutilla",
+    "nombre": "Pastilla Freegell Frutilla",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Medias",
+    "unidades": "12",
+    "supercategoria": "Ropa",
+    "subcategoria": "Medias largas",
+    "categoriaPrincipal": "boxer",
+    "descuento": {
+      "tipo": "limitada",
+      "texto": "70% OFF"
+    }
   },
   {
     "id": "Mentitas",
@@ -370,6 +385,23 @@
     "subcategoria": "Globo azul",
     "unidades": "12",
     "supercategoria": "Cotillon",
+    "categoriaPrincipal": "Globos",
+    "descuento": {
+      "tipo": "super",
+      "texto": "50% OFF"
+    }
+  },
+   {
+    "id": "Mentitas",
+    "variante": "Menta",
+    "nombre": "Pastillas mentitas menta",
+    "precio": 185,
+    "imagen": "assets/golosinas/finigusano.png",
+    "categoria": "Globos",
+    "subcategoria": "Vegetta",
+    "unidades": "12",
+    "supercategoria": "WillyRex",
+    "categoriaPrincipal": "Globos",
     "descuento": {
       "tipo": "super",
       "texto": "50% OFF"
@@ -384,6 +416,7 @@
     "categoria": "Pastillas",
     "unidades": "12",
     "subcategoria": "Pastilla TNT",
+    "categoriaPrincipal": "boxer",
     "supercategoria": "Golosinas",
     "descuento": {
       "tipo": "super",
@@ -399,6 +432,7 @@
     "categoria": "Pastillas",
     "subcategoria": "Pastilla TNT",
     "supercategoria": "Golosinas",
+    "categoriaPrincipal": "boxer",
     "unidades": "12",
     "descuento": {
       "tipo": "super",

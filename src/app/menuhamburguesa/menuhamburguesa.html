@@ -1,0 +1,30 @@
+<button class="hamburguesa-btn" (click)="toggleMenu()">
+  <mat-icon>menu</mat-icon>
+</button>
+
+<div class="menu-overlay" [class.activo]="abierto()" (click)="cerrarMenu()"></div>
+
+<aside class="menu-panel" [class.abierto]="abierto()">
+  <button class="cerrar" (click)="cerrarMenu()">
+    <mat-icon svgIcon="">close</mat-icon>
+  </button>
+  <nav>
+    <a routerLink="/inicio" (click)="cerrarMenu()">Inicio</a>
+    <a routerLink="/catalogo" (click)="cerrarMenu()">Tienda</a>
+    <a routerLink="/locales" (click)="cerrarMenu()">Contacto</a>
+
+    <div *ngFor="let super of categoriasAgrupadas()">
+      <h4>{{ super.supercategoria }}</h4>
+      <div *ngFor="let cat of super.categorias">
+        <strong>{{ cat.categoria }}</strong>
+        <ul>
+          <li *ngFor="let sub of cat.subcategorias">
+            <button (click)="irAFiltro(super.supercategoria, cat.categoria, sub.subcategoria, sub.categoriaPrincipal)">
+              {{ sub.subcategoria }}
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</aside>

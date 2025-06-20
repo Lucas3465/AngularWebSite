@@ -1,5 +1,22 @@
 <title>Dulcemania</title>
 
+<div class="navcelular">
+  <app-menuhamburguesa></app-menuhamburguesa>
+
+  <div class="logo">
+    <img routerLink="/inicio" routerLinkActive="router-link-active" src="assets/iconos/logohd.png" alt="Dulcemania logo" />
+  </div>
+
+  <div class="carrito-icono" (click)="toggleCarrito()">
+    <mat-icon>
+      {{ mostrarCarrito ? "close" : "shopping_bag" }}
+    </mat-icon>
+    <span *ngIf="cantidadTotal > 0" class="badge">
+      {{ cantidadTotal > 99 ? '+99' : cantidadTotal }}
+    </span>
+  </div>
+</div>
+
 
 <div class="nav">
   <div class="logo">
