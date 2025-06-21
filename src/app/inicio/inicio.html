@@ -28,7 +28,7 @@
                 <div class="flip-card-back">
                         <h3>Te hacemos precio para tu comercio con tu número de RUT, comunicate con nosotros al número comercial</h3>
                         <p>096302355</p>
-                        <button class="btn-volver" (click)="voltearTarjeta($event)">Volver</button>
+                        <!-- <button class="btn-volver" (click)="voltearTarjeta($event)">Volver</button> -->
                 </div>
             </div>  
         </div>
@@ -46,9 +46,9 @@
                         <a href="#"><i class="btn">Leer más</i></a>
                 </div>
                 <div class="flip-card-back">
-                        <h3>Realizamos envíos a todo el territorio Uruguayo, trabajamos con las principales agencias del país para llegar a tu puerta</h3>
-                        <p>El tiempo de entrega puede variar entre 24hs a 72hs hábiles dependiendo la zona</p>
-                        <button class="btn-volver" (click)="voltearTarjeta($event)">Volver</button>
+                        <h3>Realizamos envíos a todo el territorio Uruguayo, por problemas comunicarte al número </h3>
+                        <p>096302355</p>
+                        <!-- <button class="btn-volver" (click)="voltearTarjeta($event)">Volver</button> -->
                 </div>
             </div>  
         </div>
@@ -74,7 +74,7 @@
                 <div class="flip-card-back">
                         <h3>Hola</h3>
                         <p>Hola</p>
-                        <button class="btn-volver" (click)="voltearTarjeta($event)">Volver</button>
+                        <!-- <button class="btn-volver" (click)="voltearTarjeta($event)">Volver</button> -->
                 </div>
             </div>  
         </div>
@@ -91,7 +91,10 @@
                 (mouseenter)="onCardHover(i, true)"
                 (mouseleave)="onCardHover(i, false)"
         >
-            <div class="cattext">{{ categoria.nombre }}</div>
+            <div class="cattext">{{ categoria.nombre }}
+                <div class="cattitulo">{{ categoria.titulo }}</div>
+                <div class="catinfo">{{ categoria.info }}</div>
+            </div>
             <div class="catimg"><img class="catimgproduct" src="{{ categoria.img }}" alt=""></div>
         </div>
         

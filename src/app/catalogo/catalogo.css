@@ -271,7 +271,7 @@
 .menu-categorias,
 .menu-supercategorias {
   position: relative;
-  z-index: 100000;
+  z-index: 1000;
 }
 
 .supercategoria-item {
@@ -382,7 +382,7 @@
   margin-left: 5px;
   min-width: 160px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  z-index: 99999;
+  z-index: 9999;
   pointer-events: auto;
   transition: none;
   display: block; 
@@ -423,14 +423,103 @@
   }
 }
 
-@media (max-width: 768px) {
-  .menu-item {
-    flex: 1 1 calc(50% - 30px);
+@media (max-width: 599px) {
+  .productos-grid {
+    grid-template-columns: 1fr !important;
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .producto-card {
+    height: auto !important;
+    padding: 10px !important;
+  }
+
+  .producto-card img {
+    max-height: 120px !important;
+  }
+
+  .filtros {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .filtros > :not(:last-child),
+  .filtros > :last-child {
+    max-width: 100% !important;
+    flex: none !important;
+  }
+
+  .menu-categorias {
+    display: none !important;
   }
 }
 
-@media (max-width: 480px) {
-  .menu-item {
-    flex: 1 1 100%;
+/* Tablets */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .productos-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
+    gap: 18px;
+    padding: 0 15px;
+  }
+
+  .producto-card {
+    height: auto !important;
+    padding: 12px !important;
+  }
+
+  .producto-card img {
+    max-height: 130px !important;
+  }
+
+  .filtros {
+    flex-wrap: wrap !important;
+    gap: 15px !important;
+  }
+
+  .filtros > :not(:last-child),
+  .filtros > :last-child {
+    max-width: 100% !important;
+    flex: 1 1 200px !important;
+  }
+
+  .menu-categorias {
+    display: none !important;
+  }
+}
+
+/* Desktops / Laptops */
+@media (min-width: 1024px) {
+  .productos-grid {
+    grid-template-columns: repeat(auto-fill, 250px) !important;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .producto-card {
+    height: 350px !important;
+    padding: 15px !important;
+  }
+
+  .producto-card img {
+    max-height: 140px !important;
+  }
+
+  .filtros {
+    flex-wrap: nowrap !important;
+    gap: 15px !important;
+  }
+
+  .filtros > :not(:last-child) {
+    max-width: 250px !important;
+    flex: 1 1 auto !important;
+  }
+
+  .filtros > :last-child {
+    flex-grow: 0 !important;
+  }
+
+  .menu-categorias {
+    display: flex !important;
   }
 }

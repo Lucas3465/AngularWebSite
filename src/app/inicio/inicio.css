@@ -904,114 +904,599 @@ app-etiquetaoferta {
   }
 }
 
-@media (max-width: 768px) {
-  section {
-    padding: 1.5rem 5%;
+/* Celulares normales (376px a 480px) */
+@media (max-width: 375px) {
+  .inicio {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+    background-attachment: scroll;
+  }
+
+  .inicio .iniciocontent {
+    width: 95%;
+  }
+
+  .inicio .iniciocontent h3 {
+    font-size: 1.8rem;
+  }
+
+  .inicio .iniciocontent span {
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
   }
 
   .btn {
-    padding: 0.6rem 1.5rem;
-    font-size: 1.3rem;
-    gap: 0.5rem;
+    font-size: 1.2rem;
+    padding: 0.5rem 1.2rem;
+    gap: 0.4rem;
+    text-decoration: none !important;
   }
 
+  .headerservicios {
+    margin-bottom: 1px;
+    font-size: 2rem;
+  }
+
+  .headerservicios span {
+    font-size: 2.5rem;
+    padding: 0.3rem 1rem;
+  }
+
+  .servicios .box-container {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+    gap: 6rem;
+  }
+
+  .boxservicios {
+    height: auto;
+    min-height: unset;
+    max-height: unset;
+    margin: 0 auto;
+  }
+  .content-wrapper {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+  }
+  .btn-wrapper {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .flip-card-inner,
+  .flip-card-front,
+  .flip-card-back {
+    width: 300px;
+    height: 560px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+
+  .servicios .box-container .boxservicios:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .flip-card-front h3 {
+    font-size: 1.4rem;
+  }
+
+  .flip-card-front p,
+  .flip-card-back p {
+    font-size: 1rem;
+  }
+
+  .flip-card-front .content-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .flip-card-front .btn-wrapper {
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .flip-card-front .btn {
+    font-size: 1.1rem;
+    padding: 0.4rem 1rem;
+    text-decoration: none !important;
+  }
+  .cattitulo{
+    font-size: 1.1rem;
+  }
+  .catinfo{
+    font-size: 0.9rem;
+  }
+
+  .catcard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 250px;
+    height: 100%;
+    box-sizing: border-box;
+    transform: scale(0.95);
+  }
+  .catcard-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+    gap: 1rem;
+    max-height: calc(200px * 2 + 1rem);
+    width: 70%;
+    margin: 0 auto;
+  }
+
+   .contenedor-presentaciones {
+    padding: 16px 0;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .presentaciones-slider {
+    width: 100%;
+    padding: 40px 0;
+    margin: 0 auto;
+  }
+  .contenedor-presentaciones::before,
+  .contenedor-presentaciones::after {
+    width: 80px;
+  }
+ 
+  .swiper-slide.box {
+    width: 130px !important;
+    padding: 0.9rem 0.8rem;
+    border-radius: 1rem;
+  }
+  .productoimg {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 0.6rem;
+    border-radius: 10px;
+  }
+  .swiper-wrapper {
+    gap: 3px;
+  }
+  .swiper-slide.box {
+    height: 100%;
+    width: 160px !important;
+  }
+
+  .swiper-slide.box h1 {
+    font-size: 1rem;
+    height: 2.1em;
+  }
+
+  .swiper-slide.box h2 {
+    font-size: 1rem;
+  }
+
+  .price {
+    font-size: 1.1rem;
+  }
+
+  .btnpresentacion {
+    font-size: 1.2rem !important;
+    width: 38px;
+    height: 38px;
+  }
+
+  .badge {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.6rem;
+  }
+
+  .badge-icon {
+    font-size: 0.8rem !important;
+    top: 3px;
+  }
+
+  .contenedor-boton-carrito {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* Celulares normales (376px a 480px) */
+@media (min-width: 376px) and (max-width: 480px) {
   .inicio {
-    padding-top: 10rem;
+    padding-top: 9rem;
     padding-bottom: 5rem;
-    background-attachment: scroll;
   }
 
   .inicio .iniciocontent {
     width: 90%;
   }
-
-  .inicio .iniciocontent h3 {
-    font-size: 2rem;
+  .cattitulo {
+    font-size: 1.2rem;
+  }
+  .catinfo {
+    font-size: 1rem;
   }
 
-  .inicio .iniciocontent span {
-    letter-spacing: 0.3rem;
-    font-size: 2.2rem;
+  .catcard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 270px;
+    height: 100%;
+    box-sizing: border-box;
+    transform: scale(0.97);
+  }
+  .catcard-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 210px;
+    gap: 1rem;
+    max-height: calc(210px * 2 + 1rem);
+    width: 75%;
+    margin: 0 auto;
   }
 
-  .headerservicios {
-    font-size: 2.2rem;
-  }
-
-  .headerservicios span {
-    padding: .3rem 1.5rem;
-    font-size: 2rem;
+  .btn {
+    font-size: 1.3rem;
+    padding: 0.6rem 1.4rem;
+    text-decoration: none !important;
   }
 
   .servicios .box-container {
     grid-template-columns: 1fr;
+    padding: 0 1.5rem;
+    gap: 6rem;
   }
 
-  .servicios .box-container .box {
-    padding: 2rem 1rem;
+  .boxservicios {
+    height: auto;
+    min-height: unset;
+    max-height: unset;
+    margin: 0 auto;
   }
 
-  .servicios .box-container .box h3 {
-    font-size: 1.6rem;
+  .content-wrapper {
+    flex-grow: 1;
+    margin-bottom: 1rem;
   }
 
-  .servicios .box-container .box p {
-    font-size: 1.6rem;
+  .btn-wrapper {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
   }
 
-
-  .presentaciones .presentaciones-slider {
-    padding: 0.5rem;
+  .flip-card-inner,
+  .flip-card-front,
+  .flip-card-back {
+    width: 320px;
+    height: 580px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
   }
 
-  .presentaciones .presentaciones-slider .box {
-    width: 15rem;
-    padding: 1rem;
+  .flip-card-back {
+    transform: rotateY(180deg);
   }
 
-  .presentaciones .presentaciones-slider .box img {
-    height: 8rem;
+  .servicios .box-container .boxservicios:hover {
+    transform: none !important;
+    box-shadow: none !important;
   }
 
-  .presentaciones .presentaciones-slider .box h1 {
-    font-size: 1.6rem;
-  }
-
-  .presentaciones .presentaciones-slider .box h2 {
-    font-size: 1.3rem;
-    gap: 0.3rem;
-    padding: 0.3rem 0.6rem;
-  }
-
-  .unidadespresentacion {
+  .flip-card-front h3,
+  .flip-card-back h3 {
     font-size: 1.5rem;
   }
 
-  .presentaciones .presentaciones-slider .box .price {
-    font-size: 1.5rem;
-    padding: 0.6rem 1rem;
-    gap: 0.2rem;
+  .flip-card-front p,
+  .flip-card-back p {
+    font-size: 1.1rem;
   }
 
-  .presentaciones-slider .wrapper {
-    gap: 1rem;
+  .flip-card-front .content-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  .presentaciones-slider .carpresentacion {
-    width: 3rem;
-    height: 3rem;
+  .flip-card-front .btn-wrapper {
+    margin-top: auto;
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
-  .presentaciones-slider .carpresentacion mat-icon {
-    font-size: 1.6rem;
+  .flip-card-front .btn {
+    font-size: 1.2rem;
+    padding: 0.5rem 1.2rem;
+    text-decoration: none !important;
+  }
+  
+  .contenedor-presentaciones {
+    padding: 20px 0;
+    max-width: 90%;
+    border-radius: 16px;
+  }
+  .presentaciones-slider {
+    
+    width: 100%;
+    padding: 20px 20px;
+  }
+  .swiper-slide.box {
+    width: 180px !important;
+    padding: 1rem 1rem;
+    border-radius: 1.2rem;
+  }
+  .productoimg {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 0.8rem;
+    border-radius: 12px;
+  }
+  .swiper-slide.box h1 {
+    font-size: 1.1rem;
+    height: 2.2em;
+  }
+  .swiper-slide.box h2 {
+    font-size: 1.1rem;
+  }
+  .price {
+    font-size: 1.2rem;
+  }
+  .btnpresentacion {
+    font-size: 1.3rem !important;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* Tablets y celulares grandes (481px a 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .inicio {
+    padding-top: 10rem;
+    padding-bottom: 6rem;
   }
 
-  .dineropresentacion {
+  .inicio .iniciocontent {
+    width: 85%;
+  }
+
+  .btn {
+    font-size: 1.4rem;
+    padding: 0.7rem 1.6rem;
+    text-decoration: none !important;
+  }
+
+  .servicios .box-container {
+    grid-template-columns: 1fr;
+    padding: 0 2rem;
+    gap: 4rem;
+  }
+
+  .boxservicios {
+    height: auto;
+    min-height: unset;
+    max-height: unset;
+    margin: 0 auto;
+  }
+
+  .content-wrapper {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+  }
+
+  .btn-wrapper {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .flip-card-inner,
+  .flip-card-front,
+  .flip-card-back {
+    width: 350px;
+    height: 600px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+
+  .servicios .box-container .boxservicios:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .flip-card-front h3,
+  .flip-card-back h3 {
+    font-size: 1.8rem;
+  }
+
+  .flip-card-front p,
+  .flip-card-back p {
     font-size: 1.2rem;
   }
 
-  .carrito-desplegable {
-    min-width: 120px;
-    font-size: 0.9rem;
+  .flip-card-front .content-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .flip-card-front .btn-wrapper {
+    margin-top: auto;
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .flip-card-front .btn {
+    font-size: 1.3rem;
+    padding: 0.6rem 1.4rem;
+    text-decoration: none !important;
+  }
+
+  .presentaciones-slider {
+    width: 100%;
+    padding: 2rem;
+  }
+  .cattitulo {
+    font-size: 1.3rem;
+  }
+  .catinfo {
+    font-size: 1.1rem;
+  }
+
+  .catcard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 300px;
+    height: 100%;
+    box-sizing: border-box;
+    transform: scale(1);
+  }
+  .catcard-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 230px;
+    gap: 1rem;
+    max-height: calc(230px * 2 + 1rem);
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* Laptops pequeñas y tablets grandes (769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .inicio .iniciocontent {
+    width: 70%;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+    padding: 0.8rem 1.8rem;
+    text-decoration: none !important;
+  }
+
+  .servicios .box-container {
+    padding: 0 3rem;
+    gap: 10rem;
+    flex-direction: column;
+  }
+
+  .boxservicios {
+    height: auto;
+    min-height: unset;
+    max-height: unset;
+    margin: 0 auto;
+  }
+
+  .content-wrapper {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+  }
+
+  .btn-wrapper {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .flip-card-inner,
+  .flip-card-front,
+  .flip-card-back {
+    width: 380px;
+    height: 620px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+
+  .servicios .box-container .boxservicios:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .flip-card-front h3,
+  .flip-card-back h3 {
+    font-size: 2rem;
+  }
+
+  .flip-card-front p,
+  .flip-card-back p {
+    font-size: 1.3rem;
+  }
+
+  .flip-card-front .content-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .flip-card-front .btn-wrapper {
+    margin-top: auto;
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .flip-card-front .btn {
+    font-size: 1.4rem;
+    padding: 0.7rem 1.6rem;
+    text-decoration: none !important;
+  }
+
+  .presentaciones-slider {
+    width: 100%;
+    padding: 2rem 4rem;
+  }
+  .cattitulo {
+    font-size: 1.4rem;
+  }
+  .catinfo {
+    font-size: 1.2rem;
+  }
+
+  .catcard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 320px;
+    height: 100%;
+    box-sizing: border-box;
+    transform: scale(1);
+  }
+  .catcard-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 250px;
+    gap: 1rem;
+    max-height: calc(250px * 2 + 1rem);
+    width: 75%;
+    margin: 0 auto;
   }
 }

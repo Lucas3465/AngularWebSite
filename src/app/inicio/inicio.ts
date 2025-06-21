@@ -17,7 +17,7 @@ import { Etiquetaoferta } from '../etiquetaoferta/etiquetaoferta';
 
 import { NgModel } from '@angular/forms';
 
-// import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+
 @Component({
   selector: 'app-inicio',
   imports: [CommonModule, MatIconModule, RouterOutlet, RouterLink, Notificacion, NgForOf, LottieComponent, Etiquetaoferta ],
@@ -176,11 +176,12 @@ export class Inicio implements AfterViewInit, OnInit {
   }
   
   categorias = [
-    { id: 1, nombre: "Alfajores", img: "assets/golosinas/pacoquita.png" },
-    { id: 2, nombre: "Gomitas", img: "assets/golosinas/finidino.png" },
-    { id: 3, nombre: "Chocolates", img: "assets/golosinas/finiestrella.png" },
-    { id: 4, nombre: "Bombones", img: "assets/golosinas/finigusano.png" },
-    { id: 5, nombre: "Cremas", img: "assets/golosinas/finimal.png" },
+    { id: 1, nombre: "Alfajores", titulo: "-Sabores-", info: "Chocolate, Blanco, Nieve", img: "assets/golosinas/pacoquita.png" },
+    { id: 2, nombre: "Gomitas", titulo: "-Tipos-", info: "Gusano, Bananas, Ositos", img: "assets/golosinas/finidino.png" },
+    { id: 3, nombre: "Chocolates", titulo: "-Variantes-", info: "Cobertura, Barra, Gotas", img: "assets/golosinas/finiestrella.png" },
+    { id: 4, nombre: "Bombones", titulo: "-Marcas-", info: "Bonobon, Happy, Bel", img: "assets/golosinas/finigusano.png" },
+    { id: 5, nombre: "Cremas", titulo: "-Sabores-", info: "Limon, Blanco, Nieve", img: "assets/golosinas/finimal.png" },
+    { id: 6, nombre: "Jugos", titulo: "-Sabores-", info: "Tropical, Naranja, Manzana", img: "assets/golosinas/finimal.png" },
   ]
   
 
@@ -206,8 +207,14 @@ export class Inicio implements AfterViewInit, OnInit {
   ngAfterViewInit(): void {
     Swiper.use([Autoplay, Navigation, Pagination]);
 
+    
     const sliders = document.querySelectorAll('.presentaciones-slider');
+    
+
     sliders.forEach(sliderEl => {
+      const totalSlides = sliderEl.querySelectorAll(".swiper-slide").length
+      const isMobile = window.matchMedia("(max-width: 375px)").matches
+
       new Swiper(sliderEl as HTMLElement, {
         slidesPerView: "auto",
         spaceBetween: 20,
@@ -228,11 +235,13 @@ export class Inicio implements AfterViewInit, OnInit {
         },
         resistance: true,
         resistanceRatio: 0.85,
-        // breakpoints: {
-        //   0: { slidesPerView: 1 },
-        //   768: { slidesPerView: 2 },
-        //   1024: { slidesPerView: 4 },
-        // }
+
+        ...(isMobile) && {
+              initialSlide: 2,
+              loopedSlides: totalSlides,
+        }
+
+
       });
     });
 
