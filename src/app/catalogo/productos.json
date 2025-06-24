@@ -338,7 +338,7 @@
     "categoriaPrincipal": "Ropa",
     "descuento": {
       "tipo": "normal",
-      "texto": "30% OFF"
+      "texto": "-30%"
     }
     
   },
@@ -355,7 +355,7 @@
     "categoriaPrincipal": "medias",
     "descuento": {
       "tipo": "limitada",
-      "texto": "70% OFF"
+      "texto": "-70%"
     }
   },
   {
@@ -372,7 +372,7 @@
     "categoriaPrincipal": "boxer",
     "descuento": {
       "tipo": "limitada",
-      "texto": "70% OFF"
+      "texto": "-70%"
     }
   },
   {
@@ -388,7 +388,7 @@
     "categoriaPrincipal": "Globos",
     "descuento": {
       "tipo": "super",
-      "texto": "50% OFF"
+      "texto": "-50%"
     }
   },
    {
@@ -404,7 +404,7 @@
     "categoriaPrincipal": "Globos",
     "descuento": {
       "tipo": "super",
-      "texto": "50% OFF"
+      "texto": "-50%"
     }
   },
   {
@@ -420,7 +420,7 @@
     "supercategoria": "Golosinas",
     "descuento": {
       "tipo": "super",
-      "texto": "50% OFF"
+      "texto": "-50%"
     }
   },
   {
@@ -436,7 +436,7 @@
     "unidades": "12",
     "descuento": {
       "tipo": "super",
-      "texto": "50% OFF"
+      "texto": "-50%"
     }
   }
   

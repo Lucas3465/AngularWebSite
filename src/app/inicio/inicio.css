@@ -1,6 +1,31 @@
+
+#gatitos {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+  padding-top: 120px;
+
+}
+
+#gatitos::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  background-image: url('/assets/iconos/fondoinicio.png');
+  background-repeat: no-repeat;
+  background-position: center 0px;
+  background-size: 100% auto;
+  z-index: -1;  
+  pointer-events: none; 
+}
 section {
-    padding: 2rem 9%;
-    
+    padding: 2rem 9%;  
 }
 
 .btn {
@@ -288,6 +313,8 @@ section {
     font-family: 'Fredoka', sans-serif;
     font-weight: 1000;
     font-style: normal;
+    position: relative;
+    z-index: 10;
 }
 .headerservicios span{
     background: green;
@@ -738,6 +765,15 @@ section {
   justify-content: center;
   align-items: center;
   perspective: 1500px; 
+
+  border-radius: 24px; 
+  border: 5px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(45deg, #c2185b, #e91e63, #f8a50c);
+  box-shadow: 0 0 20px rgba(194, 24, 91, 0.4);
+  background-clip: padding-box;
+  background-color: #fff0f6;
 }
 
 .escenario {
@@ -906,6 +942,30 @@ app-etiquetaoferta {
 
 /* Celulares normales (376px a 480px) */
 @media (max-width: 375px) {
+  
+  #gatitos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 125%;
+    height: 600px; 
+    background-position: center top;
+    background-size: 120% 600px; 
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: -1;
+    border-radius: 25%;
+    overflow: hidden;
+  }
+
+  #gatitos {
+    min-height: auto; 
+    padding-top: 80px;
+    overflow: visible; 
+  }
+
   .inicio {
     padding-top: 8rem;
     padding-bottom: 4rem;
@@ -1041,6 +1101,8 @@ app-etiquetaoferta {
     padding: 16px 0;
     max-width: 100%;
     border-radius: 12px;
+    position: relative;
+    z-index: 1;
   }
 
   .presentaciones-slider {
@@ -1105,10 +1167,105 @@ app-etiquetaoferta {
     width: 42px;
     height: 42px;
   }
+  .headerofertas{
+    padding: 60px 30px;
+  }
+  .carrusel {
+    gap: 15px;
+  }
+  .escenario {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .producto.activo {
+    transform: translateZ(60px) scale(1.1) rotateY(0deg);
+  }
+ app-etiquetaoferta {
+  top: 4px;
+  left: 4px;
+  font-size: 0.7rem;      
+  padding: 0px 2px;      
+  z-index: 20;
+  position: absolute;
+  display: flex;         
+  align-items: center;   
+  justify-content: center; 
+  white-space: nowrap;   
+}
+
+app-etiquetaoferta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.15;           
+  z-index: -1;
+  border-radius: 12px;
+}
+
+  .producto {
+    width: 370px;
+    height: 210px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+  .producto img {
+    width: 100%;
+    height: auto;
+    max-height: 160px;
+    object-fit: contain;
+  }
+
+  .producto .nombre {
+    font-size: 1rem;
+  }
+
+  .foco {
+    width: 100px;
+    height: 200px;
+  }
+
+  .foco-izquierdo {
+    left: 40px;
+  }
+
+  .foco-derecho {
+    right: 40px;
+  }
 }
 
 /* Celulares normales (376px a 480px) */
 @media (min-width: 376px) and (max-width: 480px) {
+
+  #gatitos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 125%;
+    height: 600px; 
+    background-position: center top;
+    background-size: 120% 600px; 
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: -1;
+    border-radius: 20%;
+    overflow: hidden;
+  }
+
+  #gatitos {
+    min-height: auto; 
+    padding-top: 80px;
+    overflow: visible; 
+  }
+
   .inicio {
     padding-top: 9rem;
     padding-bottom: 5rem;
@@ -1266,10 +1423,107 @@ app-etiquetaoferta {
     width: 42px;
     height: 42px;
   }
+  .headerofertas{
+    padding: 60px 30px;
+  }
+  .headerofertas{
+    padding: 60px 30px;
+  }
+  .carrusel {
+    gap: 15px;
+  }
+  .escenario {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .producto.activo {
+    transform: translateZ(60px) scale(1.1) rotateY(0deg);
+  }
+ app-etiquetaoferta {
+  top: 4px;
+  left: 4px;
+  font-size: 0.7rem;      
+  padding: 0px 2px;      
+  z-index: 20;
+  position: absolute;
+  display: flex;         
+  align-items: center;   
+  justify-content: center; 
+  white-space: nowrap;   
+}
+
+app-etiquetaoferta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.15;            
+  z-index: -1;
+  border-radius: 12px;
+}
+
+  .producto {
+    width: 370px;
+    height: 220px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+  .producto img {
+    width: 100%;
+    height: auto;
+    max-height: 160px;
+    object-fit: contain;
+  }
+
+  .producto .nombre {
+    font-size: 1rem;
+  }
+
+  .foco {
+    width: 100px;
+    height: 200px;
+  }
+
+  .foco-izquierdo {
+    left: 40px;
+  }
+
+  .foco-derecho {
+    right: 40px;
+  }
 }
 
 /* Tablets y celulares grandes (481px a 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
+
+  #gatitos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 125%;
+    height: 600px; 
+    background-position: center top;
+    background-size: 120% 600px; 
+    background-repeat: no-repeat;
+    pointer-events: none;
+    border-radius: 15%;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  #gatitos {
+    min-height: auto; 
+    padding-top: 80px;
+    overflow: visible; 
+  }
   .inicio {
     padding-top: 10rem;
     padding-bottom: 6rem;
@@ -1430,6 +1684,28 @@ app-etiquetaoferta {
 
 /* Laptops pequeñas y tablets grandes (769px a 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
+  #gatitos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 115%;
+    height: 600px; 
+    background-position: center top;
+    background-size: 120% 600px; 
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: -1;
+    border-radius: 15%;
+    overflow: hidden;
+  }
+
+  #gatitos {
+    min-height: auto; 
+    padding-top: 80px;
+    overflow: visible; 
+  }
   .inicio .iniciocontent {
     width: 70%;
   }
@@ -1582,5 +1858,103 @@ app-etiquetaoferta {
     max-height: calc(250px * 2 + 1rem);
     width: 75%;
     margin: 0 auto;
+  }
+
+  .headerofertas{
+    padding: 100px 60px;
+  }
+  .carrusel {
+    gap: 20px;
+  }
+  .escenario {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .producto.activo {
+    transform: translateZ(60px) scale(1.15) rotateY(0deg);
+  }
+  app-etiquetaoferta {
+    top: 5px;
+    left: 5px;
+    font-size: 0.75rem;
+    padding: 1px 4px;
+  }
+  .producto {
+    width: 360px;
+    height: 230px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .producto img {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: contain;
+  }
+  .producto .nombre {
+    font-size: 1.1rem;
+  }
+  .foco {
+    width: 110px;
+    height: 220px;
+  }
+  .foco-izquierdo {
+    left: 50px;
+  }
+  .foco-derecho {
+    right: 50px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .carrusel {
+    gap: 25px;
+  }
+  .escenario {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .producto.activo {
+    transform: translateZ(60px) scale(1.2) rotateY(0deg);
+  }
+  app-etiquetaoferta {
+    top: 6px;
+    left: 6px;
+    font-size: 0.8rem;
+    padding: 2px 6px;
+  }
+  .producto {
+    width: 450px;
+    height: 250px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .producto img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+  }
+  .producto .nombre {
+    font-size: 1.2rem;
+  }
+  .foco {
+    width: 120px;
+    height: 240px;
+  }
+  .foco-izquierdo {
+    left: 60px;
+  }
+  .foco-derecho {
+    right: 60px;
   }
 }

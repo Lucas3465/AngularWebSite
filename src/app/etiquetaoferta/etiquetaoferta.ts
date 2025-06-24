@@ -11,7 +11,7 @@ import { NgClass, CommonModule } from '@angular/common';
 })
 export class Etiquetaoferta {
   @Input() tipo: 'normal' | 'limitada' | 'super' = 'normal'; 
-  @Input() texto: string = '50% OFF'; 
+  @Input() texto: string = '50%'; 
 
   getClaseTag() {
     switch (this.tipo) {

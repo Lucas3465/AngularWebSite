@@ -189,12 +189,13 @@ export class Inicio implements AfterViewInit, OnInit {
 
   
   ngOnInit(): void {
- 
-  this.productosEscenario = productos.slice(31, 36);
-  this.iniciarCarrusel();
-  
+  const ancho = window.innerWidth;
+  // this.productosEscenario = productos.slice(31, 36);
   this.productos = productos.slice(0, 16);
-
+  const seleccion = productos.slice(31, 36);
+  
+  this.productosEscenario = ancho <= 375 ? seleccion.slice(0, 3) : seleccion;
+    this.iniciarCarrusel();
 }
 
 
